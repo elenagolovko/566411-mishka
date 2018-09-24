@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Елена Головко](https://up.htmlacademy.ru/adaptive/15/user/566411).
-* Наставник: `Неизвестно`.
+* Наставник: `Аркадий Лукашов`.
 
 ---
 

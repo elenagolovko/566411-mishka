@@ -2,11 +2,190 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
+  <body class="main">
+    <header class="main__header header">
+      <a class="header__logo">
+        <img class="header__logo-image" width="86" height="35" src="#" alt="Логотип Мишка">
+      </a>
+      <nav class="header__navigation navigation">
+        <button class="navigation__toggle" type="button">Открыть меню</button>
+        <ul class="navigation__list visually-hidden">
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Вязание на заказ</a>
+          </li>
+          <li class="navigation__item search-block">
+            <svg class="search-block__icon"></svg>
+            <a class="navigation__link search-block__link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="navigation__item cart-block">
+            <svg class="cart-block__icon"></svg>
+            <a class="navigation__link cart-block__link" href="#">Корзина:
+              <span class="cart-block__state">пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main__content main-content">
+      <h1 class="main__title visually-hidden">Интернет-магазин "Мишка"</h1>
+      <section class="main-content__info info">
+        <h2 class="info__title"></h2>
+        <nav class="info__navigation">
+          <ul class="info__navigation-list">
+            <li class="info__navigation-item interier-item">
+              <svg class="interier__icon"></svg>
+              <a class="info__navigation-link" href="#"></a>
+            </li>
+            <li class="info__navigation-item toy-item">
+              <svg class="toy__icon"></svg>
+              <a class="info__navigation-link" href="#"></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="main-content__card card best-product">
+        <h2 class="card__title">Товар недели</h2>
+        <div class="best-product">
+          <h3 class="best-product__title"></h3>
+          <p class="best-product__description"></p>
+          <table class="best-product__info-list">
+            <tr class="best-product__info-item info">
+              <td class="info__category">
+                Цвет:
+              </td>
+              <td class="info__value">
+                «Тиффани»/серый
+              </td>
+            </tr>
+            <tr class="best-product__info-item info">
+              <td class="info__category">
+                Диаметр:
+              </td>
+              <td class="info__value">
+                25 см
+              </td>
+            </tr>
+            <tr class="best-product__info-item info">
+              <td class="info__category">
+                Высота:
+              </td>
+              <td class="info__value">
+                15 см
+              </td>
+            </tr>
+          </table>
+          <img class="best-product__image" src="#" width="260" height="315" alt="Тройной сет - лучший продукт недели">
+          <div class="best-product__price">Цена: 990 руб.</div>
+          <button class="best-product__button" type="button">ЗАКАЗАТЬ</button>
+        </div>
+      </section>
+      <section class="main-content__about about">
+        <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__list">
+          <li class="about__item">
+            <svg class="about__item-icon flower-icon"></svg>
+            <p class="about__item-text">Экологически  чистые материалы</p>
+          </li>
+          <li class="about__item">
+            <svg class="about__item-icon money-icon"></svg>
+            <p class="about__item-text">Скандинавский стиль  по российской цене</p>
+          </li>
+          <li class="about__item">
+            <svg class="about__item-icon heart-icon"></svg>
+            <p class="about__item-text">Увеличивает лайки на фотографиях</p>
+          </li>
+          <li class="about__item">
+            <svg class="about__item-icon clew-icon"></svg>
+            <p class="about__item-text">Связано вручную с  любовью и умилением</p>
+          </li>
+          <li class="about__item">
+            <svg class="about__item-icon rocket-icon"></svg>
+            <p class="about__item-text">Поддержка отечественного производителя</p>
+          </li>
+          <li class="about__item">
+            <svg class="about__item-icon preset-icon"></svg>
+            <p class="about__item-text">Поставляется в  подарочной упаковке</p>
+          </li>
+        </ul>
+      </section>
+      <section class="main-content__reviews reviews">
+        <ul class="reviews__list">
+          <li class="reviews__item review">
+            <h2 class="review__title">Отзывы</h2>
+            <p class="review__content">Я молодая мама, но всё равно фотографии не набирали и близко такого
+              количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+              и мои фотографии сразу стали более стильными, а также набирают больше лайкой</p>
+            <p class="review__author">Анастасия Красильникова</p>
+            <span class="review__author-nicname">@misssssiskras</span>
+          </li>
+        </ul>
+        <button class="reviews__previous" type="button">Обратно</button>
+        <button class="reviews__next" type="button">Вперед</button>
+        <button class="reviews__button" type="button">Написать</button>
+      </section>
+      <section class="main-content__contacts contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <table class="contacts__list">
+          <tr class="contacts__item">
+            <td class="contacts__category">
+              e-mail:
+            </td>
+            <td class="contacts__value">
+              info@mimimishkashop.ru
+            </td>
+          </tr>
+          <tr class="contacts__item">
+            <td class="contacts__category">
+              адрес:
+            </td>
+            <td class="contacts__value">
+              г. Санкт-Петербург, ул. Большая Конюшен
+            </td>
+          </tr>
+        </table>
+        <section class="contacts__map">
+          <h2 class="visually-hidden">Мы на карте</h2>
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6077115238331!2d30.320442216195!3d59.938651369059514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0YPQuy7QkdC-0LvRjNGI0LDRjyDQmtC-0L3RjtGI0LXQvdC90LDRjyAxOS84LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsw!5e0!3m2!1sru!2sru!4v1512393688220" width="1200" height="430"></iframe> -->
+        </section>
+        <button class="contacts__feedback-btn" type="button">Напишите нам</button>
+      </section>
+    </main>
+    <footer class="main__footer footer">
+      <section class="footer__social socials">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="social social-inst" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+              <svg></svg>
+            </a>
+          </li>
+          <li>
+            <a class="social social-fb" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+              <svg></svg>
+            </a>
+          </li>
+          <li>
+            <a class="social social-tw" href="#">
+              <span class="visually-hidden">Твиттер</span>
+              <svg></svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer__copyright">
+        <h2 class="visually-hidden">Кем изготовлено</h2>
+        <p class="footer__copyright-text">Разработано</p>
+        <a class="footer__copyright-link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
+      </section>
+    </footer>
   </body>
 </html>

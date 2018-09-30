@@ -18,7 +18,7 @@
             <a class="navigation__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Вязание на заказ</a>
+            <a class="navigation__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navigation__item search-block">
             <svg class="search-block__icon"></svg>
@@ -187,5 +187,21 @@
         <a class="footer__copyright-link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
       </section>
     </footer>
+    <section class="modal-cart">
+      <h2 class="moadal-cart__title">Добавить  в корзину</h2>
+      <button class="modal-cart__close" type="button" value="close">
+        <!-- кнопки закрытия похоже нет в дизайне (￣︿￣) -->
+      </button>
+      <form class="modal-cart__form choose-size" action="https://echo.htmlacademy.ru" method="post">
+        <legend>Выберите размер:</legend>
+        <label class="choose-size__label visually-hidden" for="S"></label>
+        <input type="radio" name="S" id="S">
+        <label class="choose-size__label visually-hidden" for="M"></label>
+        <input type="radio" name="M" id="M">
+        <label class="choose-size__label visually-hidden" for="L"></label>
+        <input type="radio" name="L" id="L">
+        <button class="button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>

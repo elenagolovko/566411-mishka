@@ -4,9 +4,126 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>HTML Academy: Мишка</title>
 </head>
 <body>
-
+  <header class="main__header header">
+    <a href="index.html" class="header__logo">
+      <img class="header__logo-image" width="86" height="35" src="#" alt="Логотип Мишка">
+    </a>
+    <nav class="header__navigation navigation">
+      <button class="navigation__toggle" type="button">Открыть меню</button>
+      <ul class="navigation__list visually-hidden">
+        <li class="navigation__item">
+          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="navigation__item search-block">
+          <svg class="search-block__icon"></svg>
+          <a class="navigation__link search-block__link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="navigation__item cart-block">
+          <svg class="cart-block__icon"></svg>
+          <a class="navigation__link cart-block__link" href="#">Корзина:
+            <span class="cart-block__state">пока пуста</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main__content main-content">
+    <section class="main-content__title-section title-section">
+      <h2 class="title-section__title">Вязание на заказ</h2>
+    </section>
+    <section class="main-content__form form-section">
+      <h2 class="visually-hidden">Форма заказа</h2>
+      <p class="form-section__description">Мы будем рады воплотить в жизнь ваши пожелания!
+        Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="form-section__form form" action="#" method="POST">
+        <fieldset class="form__type">
+          <legend>ТИП:</legend>
+          <label class="form__type-label" for="accessory-type">Аксессуар для  интерьера</label>
+          <input type="radio" name="accessory-type" id="accessory-type">
+          <label class="form__type-label" for="toy-type">Детская игрушка</label>
+          <input type="radio" name="toy-type" id="toy-type">
+        </fieldset>
+        <fieldset class="form__color">
+          <legend>ЦВет</legend>
+          <label class="form__color-label" for="white-color">Белый</label>
+          <input type="checkbox" name="white-color" id="white-color">
+          <label class="form__color-label" for="grey-color">Серый</label>
+          <input type="checkbox" name="grey-color" id="grey-color">
+          <label class="form__color-label" for="tiffany-color">«Тиффани»</label>
+          <input type="checkbox" name="tiffany-color" id="tiffany-color">
+          <label class="form__color-label" for="black-color">Черный</label>
+          <input type="checkbox" name="black-color" id="black-color">
+          <label class="form__color-label" for="pink-color">Розовый</label>
+          <input type="checkbox" name="pink-color" id="pink-color">
+          <label class="form__color-label" for="orange-color">Оранжевый</label>
+          <input type="checkbox" name="orange-color" id="orange-color">
+        </fieldset>
+        <fieldset class="form__name">
+          <legend>ФИО</legend>
+          <label class="form__name-label" for="name">Имя:</label>
+          <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+          <label class="form__name-label" for="surname">Фамилия:</label>
+          <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
+          <label class="form__name-label" for="patronymic">Отчество:</label>
+          <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+        </fieldset>
+        <fieldset class="form__tel">
+          <legend>тел</legend>
+          <label class="form__tel-label visually-hidden" for="tel">телефон</label>
+          <input type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+          <!-- svg как псевдоэлемент -->
+        </fieldset>
+        <fieldset class="form__tel">
+          <legend>E-mail</legend>
+          <label class="form__tel-label visually-hidden" for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Ваш Email*">
+          <!-- svg как псевдоэлемент -->
+        </fieldset>
+        <fieldset class="form__additional">
+          <legend>Доп</legend>
+          <label class="visually-hidden" for="additional">Текст</label>
+          <textarea name="additional" id="additional" placeholder="Опишите все ваши  пожелания к заказу"></textarea>
+        </fieldset>
+        <span class="form__warning">*Поля обязательны для заполнения</span>
+        <button class="form__button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+      </form>
+    </section>
+  </main>
+  <footer class="main__footer footer">
+    <section class="footer__social socials">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a class="social social-inst" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+            <svg></svg>
+          </a>
+        </li>
+        <li>
+          <a class="social social-fb" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg></svg>
+          </a>
+        </li>
+        <li>
+          <a class="social social-tw" href="#">
+            <span class="visually-hidden">Твиттер</span>
+            <svg></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__copyright">
+      <h2 class="visually-hidden">Кем изготовлено</h2>
+      <p class="footer__copyright-text">Разработано</p>
+      <a class="footer__copyright-link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
+    </section>
+  </footer>
 </body>
 </html>

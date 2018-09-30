@@ -4,9 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>HTML Academy: Мишка</title>
 </head>
-<body>
-
+<body class="main">
+  <header class="main__header header">
+    <a href="index.html" class="header__logo">
+      <img class="header__logo-image" width="86" height="35" src="#" alt="Логотип Мишка">
+    </a>
+    <nav class="header__navigation navigation">
+      <button class="navigation__toggle" type="button">Открыть меню</button>
+      <ul class="navigation__list visually-hidden">
+        <li class="navigation__item">
+          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="navigation__item search-block">
+          <svg class="search-block__icon"></svg>
+          <a class="navigation__link search-block__link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="navigation__item cart-block">
+          <svg class="cart-block__icon"></svg>
+          <a class="navigation__link cart-block__link" href="#">Корзина:
+            <span class="cart-block__state">пока пуста</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main__content main-content">
+    <section class="main-content__title-section title-section">
+      <h2 class="title-section__title">Каталог товаров</h2>
+    </section>
+    <section class="main-content__catalog catalog">
+      <h2 class="visually-hidden">Список товаров</h2>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <article class="product">
+            <h2 class="visually-hidden">Продукт</h2>
+            <img src="#" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <div class="product__info">
+              <h3 class="product__title">Зайчик-попрыгайчик</h3>
+              <p class="product__desc">Рост 30 см, вес 200 г</p>
+            </div>
+            <div class="product__price-block">
+              <p class="product__price">1 200 руб.</p>
+              <svg class="product__cart-icon"></svg>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product">
+            <h2 class="visually-hidden">Продукт</h2>
+            <img src="#" width="260" height="195" alt="Корзинка для белья">
+            <div class="product__info">
+              <h3 class="product__title">Корзинка для белья</h3>
+              <p class="product__desc">Диаметр 15 см, высота 10 см</p>
+            </div>
+            <div class="product__price-block">
+              <p class="product__price">690 руб.</p>
+              <svg class="product__cart-icon"></svg>
+            </div>
+          </article>
+          </li>
+        <li class="catalog__item">
+          <article class="product">
+            <h2 class="visually-hidden">Продукт</h2>
+            <img src="#" width="260" height="195" alt="Большая корзинка для игрушек">
+            <div class="product__info">
+              <h3 class="product__title">Большая корзинка для игрушек</h3>
+              <p class="product__desc">Диаметр 30 см, высота 30 см</p>
+            </div>
+            <div class="product__price-block">
+              <p class="product__price">1 500 руб.</p>
+              <svg class="product__cart-icon"></svg>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <section class="main-content__video video-section">
+      <div class="video-section__top">
+        <svg class="video-section__icon"></svg>
+        <h2 class="video-section__title">Процесс производства</h2>
+        <!-- Здесь должно быть видео, но я не очень понимаю как его размечать поэтому пока так -->
+        <div class="video-section__video video">
+          <svg class="video__play-btn"></svg>
+        </div>
+        <p class="video-section__description">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a href="form.html" class="video-section__button">
+          <!-- вероятно это должна быть ссылка на form (눈_눈) -->
+          СДелать заказ
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="main__footer footer">
+    <section class="footer__social socials">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a class="social social-inst" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+            <svg></svg>
+          </a>
+        </li>
+        <li>
+          <a class="social social-fb" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg></svg>
+          </a>
+        </li>
+        <li>
+          <a class="social social-tw" href="#">
+            <span class="visually-hidden">Твиттер</span>
+            <svg></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__copyright">
+      <h2 class="visually-hidden">Кем изготовлено</h2>
+      <p class="footer__copyright-text">Разработано</p>
+      <a class="footer__copyright-link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
+    </section>
+  </footer>
 </body>
 </html>

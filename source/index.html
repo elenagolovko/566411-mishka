@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML Academy: Мишка</title>
+    <title>Мишка: Главная</title>
   </head>
   <body class="main">
     <header class="main__header header">
-      <a class="header__logo">
-        <img class="header__logo-image" width="86" height="35" src="#" alt="Логотип Мишка">
+      <a class="header__logo logo">
+        <img class="logo__image" width="86" height="35" src="#" alt="Логотип Мишка">
       </a>
       <nav class="header__navigation navigation">
         <button class="navigation__toggle" type="button">Открыть меню</button>
@@ -20,14 +20,17 @@
           <li class="navigation__item">
             <a class="navigation__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="navigation__item search-block">
-            <svg class="search-block__icon"></svg>
-            <a class="navigation__link search-block__link" href="#">Поиск по сайту</a>
+          <li class="navigation__item navigation__item--search">
+            <svg class="navigation__icon navigation__icon--search"></svg>
+            <a class="navigation__link navigation__link--search" href="#">Поиск по сайту</a>
           </li>
-          <li class="navigation__item cart-block">
-            <svg class="cart-block__icon"></svg>
-            <a class="navigation__link cart-block__link" href="#">Корзина:
-              <span class="cart-block__state">пока пуста</span>
+          <li class="navigation__item navigation__item--cart">
+            <svg class="navigation__icon navigation__icon--cart"></svg>
+            <a class="navigation__link navigation__link--cart cart" href="#">Корзина:
+              <span class="cart__state">пока пуста</span>
+              <!-- Я сделала здесь опять отдельный блок cart, чтобы отнести только к нему состояние корзины
+              Я предполагаю, что при добавлении в корзину потом будет меняться текст в этом элементе
+              поэтому выделяю его -->
             </a>
           </li>
         </ul>
@@ -36,125 +39,125 @@
     <main class="main__content main-content">
       <h1 class="main__title visually-hidden">Интернет-магазин "Мишка"</h1>
       <section class="main-content__info info">
-        <h2 class="info__title"></h2>
-        <nav class="info__navigation">
-          <ul class="info__navigation-list">
-            <li class="info__navigation-item interier-item">
-              <svg class="interier__icon"></svg>
-              <a class="info__navigation-link" href="#"></a>
+        <h2 class="info__title">Милые штуки ручной работы для дома</h2>
+        <nav class="info__navigation info-navigation">
+          <ul class="info-navigation__list">
+            <li class="info-navigation__item info-navigation__item--interier">
+              <svg class="info-navigation__icon info-navigation__icon--interier"></svg>
+              <a class="info-navigation__link info-navigation__link--interier" href="#">Предметы  интерьера</a>
             </li>
-            <li class="info__navigation-item toy-item">
-              <svg class="toy__icon"></svg>
-              <a class="info__navigation-link" href="#"></a>
+            <li class="info-navigation__item info-navigation__item--toy">
+              <svg class="info-navigation__icon info-navigation__icon--toy"></svg>
+              <a class="info-navigation__link info-navigation__link--toy" href="#">Детские игрушки</a>
             </li>
           </ul>
         </nav>
       </section>
-      <section class="main-content__card card best-product">
+      <section class="main-content__card card card--best-product">
         <h2 class="card__title">Товар недели</h2>
-        <div class="best-product">
+        <article class="card__best-product best-product">
           <h3 class="best-product__title"></h3>
           <p class="best-product__description"></p>
-          <table class="best-product__info-list">
-            <tr class="best-product__info-item info">
-              <td class="info__category">
+          <ul class="best-product__chars">
+            <li class="best-product__char">
+              <div class="best-product__char--category">
                 Цвет:
-              </td>
-              <td class="info__value">
+              </div>
+              <div class="best-product__char--value">
                 «Тиффани»/серый
-              </td>
-            </tr>
-            <tr class="best-product__info-item info">
-              <td class="info__category">
+              </div>
+            </li>
+            <li class="best-product__char">
+              <div class="best-product__char--category">
                 Диаметр:
-              </td>
-              <td class="info__value">
+              </div>
+              <div class="best-product__char--value">
                 25 см
-              </td>
-            </tr>
-            <tr class="best-product__info-item info">
-              <td class="info__category">
+              </div>
+            </li>
+            <li class="best-product__char">
+              <div class="best-product__char--category">
                 Высота:
-              </td>
-              <td class="info__value">
+              </div>
+              <div class="best-product__char--value">
                 15 см
-              </td>
-            </tr>
-          </table>
+              </div>
+            </li>
+          </ul>
           <img class="best-product__image" src="#" width="260" height="315" alt="Тройной сет - лучший продукт недели">
           <div class="best-product__price">Цена: 990 руб.</div>
-          <button class="best-product__button" type="button">ЗАКАЗАТЬ</button>
-        </div>
+          <button class="best-product__action button" type="button">ЗАКАЗАТЬ</button>
+        </article>
       </section>
       <section class="main-content__about about">
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
           <li class="about__item">
-            <svg class="about__item-icon flower-icon"></svg>
-            <p class="about__item-text">Экологически  чистые материалы</p>
+            <svg class="about__icon about__icon--flower"></svg>
+            <p class="about__text">Экологически  чистые материалы</p>
           </li>
           <li class="about__item">
-            <svg class="about__item-icon money-icon"></svg>
-            <p class="about__item-text">Скандинавский стиль  по российской цене</p>
+            <svg class="about__icon about__icon--money"></svg>
+            <p class="about__text">Скандинавский стиль  по российской цене</p>
           </li>
           <li class="about__item">
-            <svg class="about__item-icon heart-icon"></svg>
-            <p class="about__item-text">Увеличивает лайки на фотографиях</p>
+            <svg class="about__icon about__icon--heart"></svg>
+            <p class="about__text">Увеличивает лайки на фотографиях</p>
           </li>
           <li class="about__item">
-            <svg class="about__item-icon clew-icon"></svg>
-            <p class="about__item-text">Связано вручную с  любовью и умилением</p>
+            <svg class="about__icon about__icon--clew"></svg>
+            <p class="about__text">Связано вручную с  любовью и умилением</p>
           </li>
           <li class="about__item">
-            <svg class="about__item-icon rocket-icon"></svg>
-            <p class="about__item-text">Поддержка отечественного производителя</p>
+            <svg class="about__icon about__icon--rocket"></svg>
+            <p class="about__text">Поддержка отечественного производителя</p>
           </li>
           <li class="about__item">
-            <svg class="about__item-icon preset-icon"></svg>
-            <p class="about__item-text">Поставляется в  подарочной упаковке</p>
+            <svg class="about__icon about__icon--preset"></svg>
+            <p class="about__text">Поставляется в  подарочной упаковке</p>
           </li>
         </ul>
       </section>
       <section class="main-content__reviews reviews">
+        <h2 class="reviews__title">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item review">
-            <h2 class="review__title">Отзывы</h2>
             <p class="review__content">Я молодая мама, но всё равно фотографии не набирали и близко такого
               количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
               и мои фотографии сразу стали более стильными, а также набирают больше лайкой</p>
-            <p class="review__author">Анастасия Красильникова</p>
-            <span class="review__author-nicname">@misssssiskras</span>
+            <div class="review__author">Анастасия Красильникова</div>
+            <div class="review__author-nickname">@misssssiskras</div>
           </li>
         </ul>
-        <button class="reviews__previous" type="button">Обратно</button>
-        <button class="reviews__next" type="button">Вперед</button>
-        <button class="reviews__button" type="button">Написать</button>
+        <button class="reviews__actions reviews__actions--previous" type="button">Обратно</button>
+        <button class="reviews__actions reviews__actions--next" type="button">Вперед</button>
+        <button class="reviews__action button" type="button">Написать</button>
       </section>
       <section class="main-content__contacts contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <table class="contacts__list">
-          <tr class="contacts__item">
-            <td class="contacts__category">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <div class="contacts__category">
               e-mail:
-            </td>
-            <td class="contacts__value">
-              info@mimimishkashop.ru
-            </td>
-          </tr>
-          <tr class="contacts__item">
-            <td class="contacts__category">
+            </div>
+            <div class="contacts__value">
+              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <div class="contacts__category">
               адрес:
-            </td>
-            <td class="contacts__value">
+            </div>
+            <div class="contacts__value">
               г. Санкт-Петербург, ул. Большая Конюшен
-            </td>
-          </tr>
-        </table>
+            </div>
+          </li>
+        </ul>
         <section class="contacts__map">
           <h2 class="visually-hidden">Мы на карте</h2>
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6077115238331!2d30.320442216195!3d59.938651369059514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0YPQuy7QkdC-0LvRjNGI0LDRjyDQmtC-0L3RjtGI0LXQvdC90LDRjyAxOS84LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsw!5e0!3m2!1sru!2sru!4v1512393688220" width="1200" height="430"></iframe> -->
+          <div class="map"></div>
         </section>
-        <button class="contacts__feedback-btn" type="button">Напишите нам</button>
+        <button class="contacts__action contacts__action--feedback button" type="button">Напишите нам</button>
       </section>
     </main>
     <footer class="main__footer footer">
@@ -162,29 +165,28 @@
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="social social-inst" href="#">
+            <a class="socials__link socials__link--inst" href="#">
               <span class="visually-hidden">Инстаграм</span>
-              <svg></svg>
+              <svg class="socials__icon socials__icon--inst"></svg>
             </a>
           </li>
           <li>
-            <a class="social social-fb" href="#">
+            <a class="socials__link socials__link--fb" href="#">
               <span class="visually-hidden">Фейсбук</span>
-              <svg></svg>
+              <svg class="socials__icon socials__icon--fb"></svg>
             </a>
           </li>
           <li>
-            <a class="social social-tw" href="#">
+            <a class="socials__link socials__link--tw" href="#">
               <span class="visually-hidden">Твиттер</span>
-              <svg></svg>
+              <svg class="socials__icon socials__icon--tw"></svg>
             </a>
           </li>
         </ul>
       </section>
-      <section class="footer__copyright">
-        <h2 class="visually-hidden">Кем изготовлено</h2>
-        <p class="footer__copyright-text">Разработано</p>
-        <a class="footer__copyright-link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
+      <section class="footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
       </section>
     </footer>
     <section class="modal-cart">
@@ -195,12 +197,12 @@
       <form class="modal-cart__form choose-size" action="https://echo.htmlacademy.ru" method="post">
         <legend>Выберите размер:</legend>
         <label class="choose-size__label visually-hidden" for="S"></label>
-        <input type="radio" name="S" id="S">
+        <input class="choose-size__input" type="radio" name="S" id="S">
         <label class="choose-size__label visually-hidden" for="M"></label>
-        <input type="radio" name="M" id="M">
+        <input class="choose-size__input" type="radio" name="M" id="M">
         <label class="choose-size__label visually-hidden" for="L"></label>
-        <input type="radio" name="L" id="L">
-        <button class="button" type="submit">Добавить</button>
+        <input class="choose-size__input"type="radio" name="L" id="L">
+        <button class="modal-cart__action button" type="submit">Добавить</button>
       </form>
     </section>
   </body>

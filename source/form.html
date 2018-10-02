@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="main__header header">
-    <a class="header__logo logo">
+    <a href="index.html" class="header__logo logo">
       <img class="logo__image" width="86" height="35" src="#" alt="Логотип Мишка">
     </a>
     <nav class="header__navigation navigation">
@@ -18,7 +18,7 @@
           <a class="navigation__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="form.html">Вязание на заказ</a>
+          <a class="navigation__link navigation__link--current">Вязание на заказ</a>
         </li>
         <li class="navigation__item navigation__item--search">
           <svg class="navigation__icon navigation__icon--search"></svg>
@@ -28,9 +28,6 @@
           <svg class="navigation__icon navigation__icon--cart"></svg>
           <a class="navigation__link navigation__link--cart cart" href="#">Корзина:
             <span class="cart__state">пока пуста</span>
-            <!-- Я сделала здесь опять отдельный блок cart, чтобы отнести только к нему состояние корзины
-            Я предполагаю, что при добавлении в корзину потом будет меняться текст в этом элементе
-            поэтому выделяю его -->
           </a>
         </li>
       </ul>
@@ -123,7 +120,7 @@
       </ul>
     </section>
     <section class="footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
+      <h2 class="copyright__text">Разработано</h2>
       <a class="copyright__link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
     </section>
   </footer>

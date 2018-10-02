@@ -185,23 +185,20 @@
         </ul>
       </section>
       <section class="footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
+        <h2 class="copyright__text">Разработано</h2>
         <a class="copyright__link" href="#"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Академия"></a>
       </section>
     </footer>
     <section class="modal-cart">
-      <h2 class="moadal-cart__title">Добавить  в корзину</h2>
-      <button class="modal-cart__close" type="button" value="close">
-        <!-- кнопки закрытия похоже нет в дизайне (￣︿￣) -->
-      </button>
-      <form class="modal-cart__form choose-size" action="https://echo.htmlacademy.ru" method="post">
-        <legend>Выберите размер:</legend>
-        <label class="choose-size__label visually-hidden" for="S"></label>
-        <input class="choose-size__input" type="radio" name="S" id="S">
-        <label class="choose-size__label visually-hidden" for="M"></label>
-        <input class="choose-size__input" type="radio" name="M" id="M">
-        <label class="choose-size__label visually-hidden" for="L"></label>
-        <input class="choose-size__input"type="radio" name="L" id="L">
+      <h2 class="modal-cart__title">Добавить  в корзину</h2>
+      <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="post">
+        <legend class="modal-cart__legend">Выберите размер:</legend>
+        <label class="modal-cart__label visually-hidden" for="S"></label>
+        <input class="modal-cart__input" type="radio" name="S" id="S">
+        <label class="modal-cart__label visually-hidden" for="M"></label>
+        <input class="modal-cart__input" type="radio" name="M" id="M">
+        <label class="modal-cart__label visually-hidden" for="L"></label>
+        <input class="modal-cart__input"type="radio" name="L" id="L">
         <button class="modal-cart__action button" type="submit">Добавить</button>
       </form>
     </section>

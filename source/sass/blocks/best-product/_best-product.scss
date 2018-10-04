@@ -1,0 +1,24 @@
+.best-product__chars {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.best-product__char {
+  padding: 10px 0;
+  background-image: linear-gradient(to bottom, #ffffff, #ececec);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  //вынести в модификатор?
+}
+
+.best-product__image {
+  width: 100%;
+}
+
+.best-product__price {
+  padding: 25px 0;
+  text-align: center;
+}

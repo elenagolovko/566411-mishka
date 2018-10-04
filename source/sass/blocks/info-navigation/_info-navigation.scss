@@ -1,0 +1,25 @@
+.info-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info-navigation__item {
+  width: 100%;
+  padding: 30px;
+
+  &--interier {
+    background-color: #63d1bb;
+  }
+
+  &--toy {
+    background-color: #56c3b2;
+  }
+}
+
+
+
+.info-navigation__link {
+  text-decoration: none;
+  color: #ffffff;
+}

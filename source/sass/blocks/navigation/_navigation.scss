@@ -1,0 +1,22 @@
+.navigation__toggle {
+  border: none;
+  background-color: #ffffff;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item {
+  padding: 31px 0;
+  border: 1px solid #ececec;
+  text-align: center;
+  //shadow
+}
+
+.navigation__link {
+  color: #000000;
+  text-decoration: none;
+}

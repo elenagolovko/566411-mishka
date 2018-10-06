@@ -5,6 +5,7 @@
 }
 
 .info-navigation__item {
+  position: relative;
   width: 100%;
   padding: 30px;
 
@@ -18,6 +19,38 @@
 }
 
 .info-navigation__link {
+  display: block;
+  width: 100px;
   text-decoration: none;
   color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--interier {
+    &::after {
+      right: 80px;
+      width: 50px;
+      background-image: url("../../../img/icon-interior.svg");
+    }
+  }
+
+  &--toy {
+    &::after {
+      right: 62px;
+      width: 70px;
+      background-image: url("../../../img/icon-toy.svg");
+    }
+  }
+
 }

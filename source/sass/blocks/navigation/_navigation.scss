@@ -11,12 +11,16 @@
 
 .navigation__item {
   padding: 31px 0;
-  border: 1px solid #ececec;
   text-align: center;
-  //shadow
+  border-top: 1px solid #ececec;
+}
+
+.navigation__item:last-of-type {
+  border-bottom: 1px solid #ececec;
 }
 
 .navigation__link {
   color: #000000;
   text-decoration: none;
+  font-weight: 700;
 }

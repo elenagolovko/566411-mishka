@@ -1,4 +1,23 @@
 .form__field {
+  display: flex;
+  flex-direction: column;
   border: none;
   margin-bottom: 25px;
+}
+
+.form__legend {
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #63d1bb;
+  font-weight: 700;
+}
+
+.form__label {
+  font-weight: 700;
+  color: #000000;
+
+
+  &--type, &--color {
+    padding-left: 57px;
+  }
 }

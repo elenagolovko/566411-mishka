@@ -1,17 +1,23 @@
-.best-product__chars {
+.best-product__title {
   margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.best-product__chars {
+  margin: 0 0 30px 0;
   padding: 0;
   list-style: none;
 }
 
 .best-product__char {
-  padding: 10px 0;
-  background-image: linear-gradient(to bottom, #ffffff, #ececec);
-  background-size: 100% 1px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-
-  //вынести в модификатор?
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // не соответствует макету пока
+  padding: 10px;
+  border-bottom: 1px solid #ececec;
 }
 
 .best-product__image {
@@ -21,4 +27,6 @@
 .best-product__price {
   padding: 25px 0;
   text-align: center;
+  font-weight: 700;
+  line-height: 24px;
 }

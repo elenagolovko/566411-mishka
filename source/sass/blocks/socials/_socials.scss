@@ -1,12 +1,12 @@
 .socials {
-  background-image: linear-gradient(to bottom, #ffffff, #e5e5e5);
-  background-size: 100% 1px;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .socials__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   margin: 0;
-  padding: 0;
+  padding: 0 30px 30px 30px;
   list-style: none;
 }

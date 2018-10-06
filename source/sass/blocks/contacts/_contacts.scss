@@ -4,6 +4,27 @@
 
 .contacts__list {
   padding: 0;
+  // padding: 0 30px;
   margin: 0;
   list-style: none;
+}
+
+.contacts__item {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts__value {
+  &--address {
+    width: 204px;
+  }
+}
+
+.contacts__title {
+  // padding: 0 30px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 30px;
 }

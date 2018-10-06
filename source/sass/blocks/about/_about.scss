@@ -1,5 +1,6 @@
 .about {
   padding: 30px;
+  color: #000000;
 }
 
 .about__list {
@@ -9,7 +10,55 @@
 }
 
 .about__item {
+  position: relative;
   padding-top: 60px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--flower {
+    &::before {
+      background-image: url("../../../img/icon-feature-flower.svg");
+    }
+  }
+
+  &--money {
+    &::before {
+      background-image: url("../../../img/icon-feature-money.svg");
+    }
+  }
+
+  &--heart {
+    &::before {
+      background-image: url("../../../img/icon-feature-heart.svg");
+    }
+  }
+
+  &--clew {
+    &::before {
+      background-image: url("../../../img/icon-feature-ball.svg");
+    }
+  }
+
+  &--rocket {
+    &::before {
+      background-image: url("../../../img/icon-feature-rocket.svg");
+    }
+  }
+
+  &--present {
+    &::before {
+      background-image: url("../../../img/icon-feature-gift.svg");
+    }
+  }
 }
 
 .about__text {

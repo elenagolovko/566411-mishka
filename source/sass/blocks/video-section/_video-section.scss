@@ -6,6 +6,10 @@
   padding: 30px;
 }
 
+.video-section__video {
+  position: relative;
+}
+
 .video-section__title {
   position: relative;
   padding: 27px 0 25px 96px;
@@ -36,4 +40,17 @@
 .video-section__action {
   width: auto;
   display: block;
+}
+
+.video-section__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // FIXME: наверное можно вынести в миксин центререр
+  border-radius: 21px;
+  width: 100px;
+  height: 76px;
+  background-image: url("../../../img/icon-play.svg");
+  background-repeat: no-repeat;
 }

@@ -13,7 +13,12 @@
         <img class="logo__image" width="86" height="35" src="img/logo-mobile.svg" alt="Логотип Мишка">
       </a>
       <nav class="header__navigation navigation">
-        <button class="navigation__toggle" type="button">Открыть меню</button>
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <div class="navigation__btn-line"></div>
+					<div class="navigation__btn-line"></div>
+					<div class="navigation__btn-line"></div>
+        </button>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="catalog.html">Каталог товаров</a>
@@ -22,6 +27,8 @@
             <a class="navigation__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navigation__item navigation__item--search">
+            <include src="../img/icon-search.svg"></include>
+            <!-- FIXME: Не получается почему-то, сборка собирается но тэг не понимает.... -->
             <!-- <svg class="navigation__icon navigation__icon--search visually-hidden"></svg> -->
             <a class="navigation__link navigation__link--search" href="#">Поиск по сайту</a>
           </li>
@@ -50,9 +57,9 @@
         </nav>
       </section>
       <section class="main-content__card card card--best-product">
+        <h2 class="card__title">Товар недели</h2>
         <article class="card__best-product best-product">
-          <h2 class="best-product__title">Вязаные корзинки</h2>
-          <h3 class="card__title">Товар недели</h3>
+          <h3 class="best-product__title">Вязаные корзинки</h3>
           <p class="best-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах</p>
           <ul class="best-product__chars">
             <li class="best-product__char">
@@ -114,13 +121,19 @@
           <li class="reviews__item review">
             <p class="review__content">Я молодая мама, но всё равно фотографии не набирали и близко такого
               количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-              и мои фотографии сразу стали более стильными, а также набирают больше лайкой</p>
+              и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <div class="review__author">Анастасия Красильникова</div>
             <div class="review__author-nickname">@misssssiskras</div>
           </li>
         </ul>
-        <button class="reviews__actions reviews__actions--previous" type="button">Обратно</button>
-        <button class="reviews__actions reviews__actions--next" type="button">Вперед</button>
+        <div class="reviews__actions">
+          <button class="reviews__action reviews__action--previous" type="button">
+            <span class="visually-hidden">Обратно</span>
+          </button>
+          <button class="reviews__action reviews__action--next" type="button">
+            <span class="visually-hidden">Вперед</span>
+          </button>
+        </div>
         <button class="reviews__action button button--regular" type="button">Написать</button>
       </section>
       <section class="main-content__contacts contacts">
@@ -131,7 +144,7 @@
               e-mail:
             </div>
             <div class="contacts__value">
-              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
             </div>
           </li>
           <li class="contacts__item">
@@ -145,7 +158,9 @@
           <h2 class="visually-hidden">Мы на карте</h2>
           <div class="map"></div>
         </section>
-        <button class="contacts__action contacts__action--feedback button button--regular" type="button">Напишите нам</button>
+        <div class="contacts__actions">
+          <button class="contacts__action contacts__action--feedback button button--regular" type="button">Напишите нам</button>
+        </div>
       </section>
     </main>
     <footer class="main__footer footer">

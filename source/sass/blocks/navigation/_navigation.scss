@@ -1,12 +1,26 @@
 .navigation__toggle {
+  position: absolute;
+  top: 7%;
+  right: 30px;
   border: none;
   background-color: #ffffff;
+}
+
+.navigation__btn-line {
+  height: 2px;
+  width: 20px;
+  background-color: #000000;
+
+  &:not(:last-of-type) {
+    margin-bottom: 4px;
+  }
 }
 
 .navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: #ffffff;
 }
 
 .navigation__item {

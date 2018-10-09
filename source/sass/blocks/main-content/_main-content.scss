@@ -20,3 +20,11 @@
 .main-content__form {
   padding: 30px;
 }
+
+.main-content__card,
+.main-content__reviews {
+  background-image: url('../../../img/bg-zigzag-line.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}

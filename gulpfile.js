@@ -5,6 +5,8 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -16,6 +18,12 @@ gulp.task("css", function () {
     ]))
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
+});
+
+gulp.task("html", function () {
+  return gulp.src("*.html")
+    .pipe(posthtml([include()]))
+    .pipe(gulp.dest("source/css"))
 });
 
 gulp.task("server", function () {
@@ -31,4 +39,4 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series("css", "html", "server"));

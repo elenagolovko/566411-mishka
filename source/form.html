@@ -13,7 +13,12 @@
       <img class="logo__image" width="86" height="35" src="img/logo-mobile.svg" alt="Логотип Мишка">
     </a>
     <nav class="header__navigation navigation">
-      <button class="navigation__toggle" type="button">Открыть меню</button>
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <div class="navigation__btn-line"></div>
+          <div class="navigation__btn-line"></div>
+          <div class="navigation__btn-line"></div>
+        </button>
       <ul class="navigation__list visually-hidden">
         <li class="navigation__item">
           <a class="navigation__link" href="catalog.html">Каталог товаров</a>
@@ -43,51 +48,51 @@
       <form class="form-section__form form" action="#" method="POST">
         <fieldset class="form__field form__field--type">
           <legend class="form__legend form__legend--type">ТИП:</legend>
+          <input class="form__radio visually-hidden" type="radio" name="accessory-type" id="accessory-type">
           <label class="form__label form__label--type" for="accessory-type">Аксессуар для  интерьера</label>
-          <input type="radio" name="accessory-type" id="accessory-type">
+          <input class="form__radio visually-hidden" type="radio" name="toy-type" id="toy-type">
           <label class="form__label form__label--type" for="toy-type">Детская игрушка</label>
-          <input type="radio" name="toy-type" id="toy-type">
         </fieldset>
         <fieldset class="form__field form__field--color">
           <legend class="form__legend form__legend--color">ЦВет</legend>
+          <input class="form__checkbox visually-hidden" type="checkbox" name="white-color" id="white-color">
           <label class="form__label form__label--color" for="white-color">Белый</label>
-          <input type="checkbox" name="white-color" id="white-color">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="grey-color" id="grey-color">
           <label class="form__label form__label--color" for="grey-color">Серый</label>
-          <input type="checkbox" name="grey-color" id="grey-color">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="tiffany-color" id="tiffany-color">
           <label class="form__label form__label--color" for="tiffany-color">«Тиффани»</label>
-          <input type="checkbox" name="tiffany-color" id="tiffany-color">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="black-color" id="black-color">
           <label class="form__label form__label--color" for="black-color">Черный</label>
-          <input type="checkbox" name="black-color" id="black-color">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="pink-color" id="pink-color">
           <label class="form__label form__label--color" for="pink-color">Розовый</label>
-          <input type="checkbox" name="pink-color" id="pink-color">
+          <input class="form__checkbox visually-hidden" type="checkbox" name="orange-color" id="orange-color">
           <label class="form__label form__label--color" for="orange-color">Оранжевый</label>
-          <input type="checkbox" name="orange-color" id="orange-color">
         </fieldset>
         <fieldset class="form__field form__field--name">
           <legend class="form__legend form__legend--name">ФИО</legend>
           <label class="form__label form__label--name" for="name">Имя:</label>
-          <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+          <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Введите ваше имя*">
           <label class="form__label form__label--name" for="surname">Фамилия:</label>
-          <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
+          <input class="form__input form__input--name" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
           <label class="form__label form__label--name" for="patronymic">Отчество:</label>
-          <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+          <input class="form__input form__input--name" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
         </fieldset>
         <fieldset class="form__field form__field--tel">
           <legend class="form__legend form__legend--tel">тел</legend>
           <label class="form__label form__label--tel visually-hidden" for="tel">телефон</label>
-          <input type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+          <input class="form__input form__input--tel" type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
           <!-- svg как псевдоэлемент -->
         </fieldset>
         <fieldset class="form__field form__field--email">
           <legend class="form__legend form__legend--email">E-mail</legend>
           <label class="form__label form__label--email visually-hidden" for="email">E-mail</label>
-          <input type="email" name="email" id="email" placeholder="Ваш Email*">
+          <input class="form__input form__input--email" type="email" name="email" id="email" placeholder="Ваш Email*">
           <!-- svg как псевдоэлемент -->
         </fieldset>
         <fieldset class="form__field form__field--additional">
           <legend class="form__legend form__legend--additional">Доп</legend>
           <label class="form__label form__label--additional visually-hidden" for="additional">Текст</label>
-          <textarea name="additional" id="additional" placeholder="Опишите все ваши  пожелания к заказу"></textarea>
+          <textarea class="form__input form__input--textarea" name="additional" id="additional" placeholder="Опишите все ваши  пожелания к заказу"></textarea>
         </fieldset>
         <span class="form__warning">*Поля обязательны для заполнения</span>
         <button class="form__action button button--regular" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>

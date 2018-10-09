@@ -1,9 +1,13 @@
 .navigation__toggle {
   position: absolute;
-  top: 7%;
+  top: 50%;
   right: 30px;
   border: none;
   background-color: #ffffff;
+
+  &--index {
+    top: 7%;
+  }
 }
 
 .navigation__btn-line {

@@ -28,13 +28,18 @@
 }
 
 .navigation__item {
-  padding: 31px 0;
-  text-align: center;
+  position: relative;
+  padding: 31px 23%;
   border-top: 1px solid #ececec;
 }
 
 .navigation__item:last-of-type {
   border-bottom: 1px solid #ececec;
+}
+
+.navigation__icon {
+  position: absolute;
+  left: 30px;
 }
 
 .navigation__link {

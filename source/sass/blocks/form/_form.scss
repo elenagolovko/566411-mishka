@@ -1,4 +1,7 @@
 .form__field {
+  position: relative;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   border: none;
@@ -6,10 +9,22 @@
 }
 
 .form__legend {
+  // position: relative;
+  margin-bottom: 25px;
   line-height: 16px;
   text-transform: uppercase;
   color: #63d1bb;
   font-weight: 700;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: #62d1ba;
+  }
 }
 
 .form__label {
@@ -59,6 +74,12 @@
   background-position: 50%;
 }
 
+.form__icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+}
+
 .form__input {
   width: 100%;
   box-sizing: border-box;
@@ -82,4 +103,11 @@
 .form__input::placeholder {
   font-size: 17px;
   color: #d6d6d6;
+}
+
+.form__warning {
+  display: inline-block;
+  margin: 15px 0 30px 0;
+  font-size: 14px;
+  color: #444444;
 }

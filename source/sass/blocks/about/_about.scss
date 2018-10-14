@@ -12,6 +12,7 @@
 .about__item {
   position: relative;
   padding-top: 60px;
+  padding-bottom: 20px;
   font-weight: 700;
 
   &::before {
@@ -22,6 +23,7 @@
     height: 50px;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 50%;
   }
 
   &--flower {

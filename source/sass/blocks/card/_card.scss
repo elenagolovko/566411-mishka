@@ -1,0 +1,15 @@
+.card {
+  &--best-product {
+    padding: 30px;
+  }
+}
+
+.card__title {
+  position: relative;
+  bottom: -1.7rem;
+  margin: 6px 0 0 0;
+  font-size: 17px;
+  line-height: 20px;
+  color: #63d1bb;
+  text-transform: uppercase;
+}

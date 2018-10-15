@@ -1,0 +1,69 @@
+.about {
+  padding: 30px;
+  color: #000000;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__item {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+  }
+
+  &--flower {
+    &::before {
+      background-image: url("../../../img/icon-feature-flower.svg");
+    }
+  }
+
+  &--money {
+    &::before {
+      background-image: url("../../../img/icon-feature-money.svg");
+    }
+  }
+
+  &--heart {
+    &::before {
+      background-image: url("../../../img/icon-feature-heart.svg");
+    }
+  }
+
+  &--clew {
+    &::before {
+      background-image: url("../../../img/icon-feature-ball.svg");
+    }
+  }
+
+  &--rocket {
+    &::before {
+      background-image: url("../../../img/icon-feature-rocket.svg");
+    }
+  }
+
+  &--present {
+    &::before {
+      background-image: url("../../../img/icon-feature-gift.svg");
+    }
+  }
+}
+
+.about__text {
+  margin: 0;
+  text-align: left;
+}

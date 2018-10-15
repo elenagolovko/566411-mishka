@@ -1,0 +1,15 @@
+// --- VARIABLES ---
+
+// Breakpoints
+
+$screen-xs: 0 !default;
+$screen-md: 768px !default;
+$screen-xl: 1150px !default;
+
+$breakpoints: (
+  mobile: $screen-xs,
+  tablet: $screen-md,
+  desktop: $screen-xl
+);
+
+// Colors

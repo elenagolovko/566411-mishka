@@ -2,11 +2,15 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    padding: 0 30px;
+  }
 }
 
 .info-navigation__item {
   position: relative;
-  width: 100%;
   padding: 30px;
 
   &--interier {
@@ -15,6 +19,10 @@
 
   &--toy {
     background-color: #56c3b2;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 100%;
   }
 }
 

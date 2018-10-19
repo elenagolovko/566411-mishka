@@ -1,12 +1,23 @@
 .about {
   padding: 30px;
   color: #000000;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 50px;
+  }
 }
 
 .about__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 405px;
+  }
 }
 
 .about__item {
@@ -24,6 +35,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50%;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 50%;
   }
 
   &--flower {
@@ -66,4 +81,9 @@
 .about__text {
   margin: 0;
   text-align: left;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 20px;
+    word-break: break-word;
+  }
 }

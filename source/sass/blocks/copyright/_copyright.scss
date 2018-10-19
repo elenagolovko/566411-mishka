@@ -3,6 +3,10 @@
   flex-direction: row;
   padding: 23px 38px 0 38px;
   justify-content: space-between;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 33.33%;
+  }
 }
 
 .copyright__text {

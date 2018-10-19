@@ -1,10 +1,32 @@
 .header {
   position: relative;
   padding-top: 20px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {}
 }
 
 .header__logo {
   display: block;
   margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    // width: 50%;
+    justify-content: flex-start;
+    padding-left: 30px;
+    box-sizing: border-box;
+    width: 370px;
+    margin-bottom: 0;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+  }
 }
+

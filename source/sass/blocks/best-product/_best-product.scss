@@ -1,3 +1,10 @@
+.best-product {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 50%;
+    position: relative;
+  }
+}
+
 .best-product__title {
   position: relative;
   top: -2rem;
@@ -24,6 +31,13 @@
 
 .best-product__image {
   width: 100%;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+  }
 }
 
 .best-product__price {
@@ -31,4 +45,13 @@
   text-align: center;
   font-weight: 700;
   line-height: 24px;
+}
+
+.best-product__action {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 290px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }

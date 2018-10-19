@@ -1,5 +1,5 @@
 .reviews {
-  padding: 30px;
+  position: relative;
 }
 
 .reviews__list {
@@ -12,10 +12,26 @@
   margin-bottom: 35px;
 }
 
+.reviews__wrapper {
+  padding: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    background-image: url('../../../img/review@1x.jpg');
+    background-repeat: no-repeat;
+  }
+}
+
 .reviews__actions {
   display: flex;
   flex-direction: row;
   margin-bottom: 38px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 165px;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+  }
 }
 
 .reviews__action {
@@ -34,12 +50,30 @@
   &--next {
     background-image: url("../../../img/icon-right-arrow.svg");
   }
+
+  &--feedback {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      position: absolute;
+      width: 165px;
+      top: 19%;
+      right: 50px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    box-shadow: none;
+  }
 }
 
 .reviews__title {
   color: #000000;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .review__author {

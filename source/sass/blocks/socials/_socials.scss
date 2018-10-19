@@ -1,5 +1,11 @@
 .socials {
   border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 33.33%;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 .socials__list {
@@ -9,4 +15,10 @@
   margin: 0;
   padding: 0 30px 30px 30px;
   list-style: none;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 100%;
+    align-items: center;
+    padding-bottom: 3px;
+  }
 }

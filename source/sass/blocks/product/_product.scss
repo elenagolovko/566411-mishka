@@ -1,9 +1,21 @@
 .product {
   text-align: center;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    text-align: left;
+    display: flex;
+    height: 356px;
+  }
 }
 
 .product__content {
   padding: 0 28px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .product__info {
@@ -18,6 +30,11 @@
 
 .product__image {
   width: 100%;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 334px;// временно скорее всего
+    height: 100%;
+  }
 }
 
 .product__title {

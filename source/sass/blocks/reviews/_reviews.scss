@@ -16,7 +16,7 @@
   padding: 30px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    background-image: url('../../../img/review@1x.jpg');
+    background-image: url("../../../img/review@1x.jpg");
     background-repeat: no-repeat;
   }
 }

@@ -30,9 +30,6 @@
             <svg class="navigation__icon navigation__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
               <path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
             </svg>
-            <!-- <svg class="navigation__icon navigation__icon--search" width="20" height="20">
-              <use xlink:href="#search" x=" 0" y="0"/>
-            </svg> -->
             <a class="navigation__link navigation__link--search" href="#">Поиск по сайту</a>
           </li>
           <li class="navigation__item navigation__item--cart">
@@ -43,6 +40,15 @@
               <span class="cart__state">пока пуста</span>
             </a>
           </li>
+          <li class="navigation__item navigation__item--new navigation__item--dropped">
+            <a class="navigation__link" href="#">Новые поступления</a>
+          </li>
+          <li class="navigation__item navigation__item--sale navigation__item--dropped">
+            <a class="navigation__link" href="#">Распродажа</a>
+          </li>
+          <li class="navigation__item navigation__item--delivery navigation__item--dropped">
+            <p class="navigation__text">Бесплатная доставка по России</p>
+          </li>
         </ul>
       </nav>
     </header>
@@ -51,14 +57,14 @@
       <section class="main-content__info info">
         <h2 class="info__title">Милые штуки ручной работы для дома</h2>
         <nav class="info__navigation info-navigation">
-          <ul class="info-navigation__list">
-            <li class="info-navigation__item info-navigation__item--interier">
-              <a class="info-navigation__link info-navigation__link--interier" href="#">Предметы  интерьера</a>
-            </li>
-            <li class="info-navigation__item info-navigation__item--toy">
-              <a class="info-navigation__link info-navigation__link--toy" href="#">Детские игрушки</a>
-            </li>
-          </ul>
+          <div class="info-navigation__list">
+            <a class="info-navigation__link info-navigation__link--interier button--interier">
+              <p class="info-navigation__item info-navigation__item--interier ">Предметы  интерьера</p>
+            </a>
+            <a class="info-navigation__link info-navigation__link--toy button--toy">
+              <p class="info-navigation__item info-navigation__item--toy">Детские игрушки</p>
+            </a>
+          </div>
         </nav>
       </section>
       <section class="main-content__card card card--best-product">
@@ -140,7 +146,7 @@
               <span class="visually-hidden">Вперед</span>
             </button>
           </div>
-          <button class="reviews__action reviews__action--feedback button button--regular" type="button">Написать</button>
+          <button class="reviews__action reviews__action--feedback button button--regular button--small" type="button">Написать</button>
         </div>
       </section>
       <section class="main-content__contacts contacts">

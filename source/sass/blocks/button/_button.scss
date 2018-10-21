@@ -6,11 +6,16 @@
   border: none;
   font-weight: 700;
   line-height: 20px;
+  box-sizing: border-box;
 
   &--regular {
     box-shadow: 0 0 0 2px #444444;
     background-color: #ffffff;
     color: #444444;
+
+    @media (min-width: map-get($breakpoints, mobile)) {
+      width: 230px;
+    }
   }
 
   &--special {
@@ -18,7 +23,23 @@
     color: #ffffff;
   }
 
-  @media (min-width: map-get($breakpoints, mobile)) {
-    // width: 100%;
+  &--small {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      width: 175px;
+    }
+  }
+
+  &--big {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      width: 100%;
+    }
+  }
+
+  &--interier {
+    background-color: #63d1bb;
+  }
+
+  &--toy {
+    background-color: #56c3b2;
   }
 }

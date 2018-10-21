@@ -21,12 +21,15 @@
 }
 
 .best-product__char {
+  max-width: 15rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   // не соответствует макету пока
   padding: 10px;
   border-bottom: 1px solid #ececec;
+
+  // @media (min-width: map-get($breakpoints, tablet)) {}
 }
 
 .best-product__image {

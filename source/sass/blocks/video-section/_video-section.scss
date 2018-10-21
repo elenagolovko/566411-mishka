@@ -1,13 +1,28 @@
 .video-section__content {
   border: 1px solid #ececec;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .video-section__wrapper {
   padding: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding-top: 0;
+    order: 3;
+  }
 }
 
 .video-section__video {
   position: relative;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    order: 1;
+    height: 405px;
+  }
 }
 
 .video-section__title {
@@ -17,6 +32,12 @@
   color: #000000;
   font-size: 17px;
   line-height: 24px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding-bottom: 0;
+    order: 2;
+    font-size: 20px;
+  }
 
   &::before {
     content: "";
@@ -28,6 +49,13 @@
     height: 45px;
     background-image: url("../../../img/icon-video.svg");
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      left: 30px;
+      top: 15px;
+      transform: translate(0, 0);
+    }
   }
 }
 
@@ -35,6 +63,10 @@
   margin-bottom: 30px;
   font-size: 13px;
   line-height: 24px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 15px;
+  }
 }
 
 .video-section__action {

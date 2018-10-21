@@ -1,3 +1,15 @@
+.form__section {
+  padding: 0 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 50px;
+
+    &:nth-child(2n) {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
 .form__field {
   position: relative;
   margin: 0;
@@ -16,6 +28,17 @@
   color: #63d1bb;
   font-weight: 700;
 
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin-right: 120px;
+    margin-top: 15px;
+  }
+
+  &--email {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      margin-right: 105px;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -24,6 +47,10 @@
     width: 200px;
     height: 1px;
     background-color: #62d1ba;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      display: none;
+    }
   }
 }
 
@@ -35,6 +62,10 @@
   &--type,
   &--color {
     padding: 10px 0 15px 57px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding-bottom: 23px;
+    }
 
     &::before {
       content: "";
@@ -54,13 +85,24 @@
     border: 2px solid #444444;
   }
 
-  &--color::before {
-    border: 2px solid #444444;
-    background-repeat: no-repeat;
+  &--color {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      min-width: 33%;
+    }
+
+    &::before {
+      border: 2px solid #444444;
+      background-repeat: no-repeat;
+    }
   }
 
   &--name {
     padding-top: 25px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding-top: 10px;
+      margin-right: 20px;
+    }
   }
 }
 
@@ -76,8 +118,12 @@
 
 .form__icon {
   position: absolute;
-  top: 50%;
+  top: 5px;
   right: 5px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    right: 25px;
+  }
 }
 
 .form__input {
@@ -87,9 +133,21 @@
   &--name,
   &--tel,
   &--email {
-    padding: 15px 0;
+    @media (min-width: map-get($breakpoints, mobile)) {
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    padding: 15px 0 15px 20px;
     border: none;
     border-bottom: 2px solid #000000;
+  }
+
+  &--tel,
+  &--email {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      background-color: #f1f1f1;
+    }
   }
 
   &--textarea {
@@ -102,7 +160,11 @@
 
 .form__input::placeholder {
   font-size: 17px;
-  color: #d6d6d6;
+  color: rgba(68, 68, 68, 0.3);
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 19px;
+  }
 }
 
 .form__warning {
@@ -110,4 +172,75 @@
   margin: 15px 0 30px 0;
   font-size: 14px;
   color: #444444;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 17px;
+  }
+}
+
+.form__field-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    flex-direction: row;
+  }
+}
+
+.form__inputs-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 50%;
+  }
+
+  &--colors {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      width: 80%;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
+  &--tel,
+  &--email {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      width: 500px;
+    }
+  }
+
+  &--tel {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding-left: 12px;
+    }
+  }
+
+  &--name,
+  &--additional {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      width: 100%;
+    }
+  }
+}
+
+.form__input-wrapper {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
+
+.form__action-wrapper {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 0 50px 50px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

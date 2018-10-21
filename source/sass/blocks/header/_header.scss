@@ -4,17 +4,27 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 0;
+    border-bottom: 1px solid #ececec;
   }
 
-  @media (min-width: map-get($breakpoints, desktop)) {}
+  // @media (min-width: map-get($breakpoints, desktop)) {}
 }
 
 .header__logo {
   display: block;
   margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    // FIX-ME Почему-то не работает, не применяются стили
+  }
 
   @media (min-width: map-get($breakpoints, tablet)) {
     // width: 50%;
@@ -26,7 +36,6 @@
     height: 90px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ececec;
+    // border-bottom: 1px solid #ececec;
   }
 }
-

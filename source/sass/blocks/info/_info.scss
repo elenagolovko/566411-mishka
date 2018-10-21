@@ -3,14 +3,16 @@
   background-image: url("../../../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position-x: 50%;
-  background-size: cover;
+  // background-size: cover;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     height: 606px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("../../../img/hero-tablet@1x.jpg");
+    background-image: url("../../../img/bg-zigzag-fill.svg"), url("../../../img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, 50%;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {

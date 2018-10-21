@@ -1,3 +1,20 @@
+.info-navigation {
+  &::after {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 24px;
+      max-height: 34px;
+      display: block;
+      width: 100%;
+      background-image: url("../img/svg/zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: 50% 100%;
+    }
+  }
+}
+
 .info-navigation__list {
   margin: 0;
   padding: 0;
@@ -10,24 +27,8 @@
 }
 
 .info-navigation__item {
-  position: relative;
-  padding: 30px;
-
-  &--interier {
-    background-color: #63d1bb;
-  }
-
-  &--toy {
-    background-color: #56c3b2;
-  }
-
-  @media (min-width: map-get($breakpoints, tablet)) {
-    width: 100%;
-  }
-}
-
-.info-navigation__link {
   display: block;
+  margin: 0;
   width: 100px;
   text-decoration: none;
   color: #ffffff;
@@ -50,6 +51,10 @@
       right: 80px;
       width: 50px;
       background-image: url("../../../img/icon-interior.svg");
+
+      @media (min-width: map-get($breakpoints, tablet)) {
+        right: 0;
+      }
     }
   }
 
@@ -58,6 +63,20 @@
       right: 62px;
       width: 70px;
       background-image: url("../../../img/icon-toy.svg");
+
+      @media (min-width: map-get($breakpoints, tablet)) {
+        right: 0;
+      }
     }
+  }
+}
+
+.info-navigation__link {
+  display: block;
+  position: relative;
+  padding: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 100%;
   }
 }

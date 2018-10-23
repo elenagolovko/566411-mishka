@@ -44,10 +44,20 @@
 
 .main-content__card,
 .main-content__reviews {
-  background-image: url("../../../img/bg-zigzag-line.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-image: url("../../../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
 }
 
 .main-content__reviews {

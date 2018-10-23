@@ -17,11 +17,17 @@
   margin-bottom: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     width: 45%;
   }
+}
+
+.contacts__category {
+  margin-right: 11%;
 }
 
 .contacts__value {
@@ -45,6 +51,7 @@
 }
 
 .contacts__title {
+  margin: 35px 0;
   padding: 0 30px;
   color: #000000;
   font-size: 18px;

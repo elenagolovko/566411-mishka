@@ -1,5 +1,13 @@
+.form {
+  margin-bottom: 55px;
+}
+
 .form__section {
   padding: 0 30px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
 
   @media (min-width: map-get($breakpoints, tablet)) {
     padding: 50px;
@@ -17,7 +25,10 @@
   display: flex;
   flex-direction: column;
   border: none;
-  margin-bottom: 25px;
+
+  &--tel {
+    margin-bottom: 30px;
+  }
 }
 
 .form__legend {
@@ -61,7 +72,7 @@
 
   &--type,
   &--color {
-    padding: 10px 0 15px 57px;
+    padding: 10px 0 10px 57px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
       padding-bottom: 23px;
@@ -80,12 +91,16 @@
 
   &--type::before {
     background-color: transparent;
-    box-shadow: inset 0 0 0 11px #ffffff;
+    box-shadow: inset 0 0 0 9px #ffffff;
     border-radius: 50%;
     border: 2px solid #444444;
   }
 
   &--color {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
     @media (min-width: map-get($breakpoints, tablet)) {
       min-width: 33%;
     }
@@ -93,6 +108,8 @@
     &::before {
       border: 2px solid #444444;
       background-repeat: no-repeat;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -135,7 +152,10 @@
   &--email {
     @media (min-width: map-get($breakpoints, mobile)) {
       padding-left: 0;
-      margin-bottom: 20px;
+
+      :not(:last-of-type) {
+        margin-bottom: 20px;
+      }
     }
 
     padding: 15px 0 15px 20px;
@@ -168,14 +188,20 @@
 }
 
 .form__warning {
+  order: 1;
   display: inline-block;
   margin: 15px 0 30px 0;
   font-size: 14px;
+  line-height: 16px;
   color: #444444;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     font-size: 17px;
   }
+}
+
+.form__action {
+  order: 2;
 }
 
 .form__field-wrapper {

@@ -1,19 +1,19 @@
 .navigation {
+  position: relative;
+
   @media (min-width: map-get($breakpoints, tablet)) {
+    position: static;
     width: 50%;
   }
 }
 
 .navigation__toggle {
   position: absolute;
-  top: 50%;
+  top: -60px;
+  transform: translateY(50%);
   right: 30px;
   border: none;
   background-color: #ffffff;
-
-  &--index {
-    top: 7%;
-  }
 
   @media (min-width: map-get($breakpoints, tablet)) {
     display: none;
@@ -52,7 +52,7 @@
 
 .navigation__item {
   position: relative;
-  padding: 31px 23%;
+  padding: 31px 20%;
   border-top: 1px solid #ececec;
 
   @media (min-width: map-get($breakpoints, tablet)) {
@@ -65,6 +65,7 @@
     @media (min-width: map-get($breakpoints, tablet)) {
       padding: 0;
       position: absolute;
+      z-index: 10;
       bottom: -40px;
     }
   }
@@ -83,7 +84,7 @@
     @media (min-width: map-get($breakpoints, tablet)) {
       order: 3;
       font-size: 15px;
-      left: 30px;
+      left: 50px;
     }
   }
 
@@ -91,7 +92,7 @@
     @media (min-width: map-get($breakpoints, tablet)) {
       order: 4;
       font-size: 15px;
-      left: 200px;
+      left: 220px;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
@@ -123,7 +124,7 @@
   }
 
   &--new {
-    // display: none;
+    display: none;
 
     @media (min-width: map-get($breakpoints, desktop)) {
       display: block;
@@ -131,7 +132,7 @@
   }
 
   &--sale {
-    // display: none;
+    display: none;
 
     @media (min-width: map-get($breakpoints, desktop)) {
       display: block;
@@ -159,6 +160,9 @@
   }
 
   &--cart {
+    top: 50%;
+    transform: translateY(-50%);
+
     @media (min-width: map-get($breakpoints, tablet)) {
       left: -22px;
     }

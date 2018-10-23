@@ -1,6 +1,10 @@
 .card {
   &--best-product {
     padding: 30px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding: 50px;
+    }
   }
 }
 
@@ -12,4 +16,13 @@
   line-height: 20px;
   color: #63d1bb;
   text-transform: uppercase;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    bottom: -0.7rem;
+    left: 84%;
+    max-width: 80px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 17px;
+  }
 }

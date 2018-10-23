@@ -7,6 +7,12 @@
   }
 }
 
+.about__title {
+  margin: 30px 0 20px 0;
+  line-height: 30px;
+  font-size: 25px;
+}
+
 .about__list {
   margin: 0;
   padding: 0;
@@ -23,17 +29,19 @@
 .about__item {
   position: relative;
   padding-top: 60px;
-  padding-bottom: 20px;
   font-weight: 700;
+
+  &:not(:last-of-type) {
+    padding-bottom: 20px;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    top: 7%;
+    top: 0;
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: 50%;
   }
 

@@ -1,8 +1,7 @@
 .product {
-  text-align: center;
+  text-align: left;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    text-align: left;
     display: flex;
     height: 356px;
   }
@@ -10,6 +9,7 @@
 
 .product__content {
   padding: 0 28px;
+  border: 1px solid #ececec;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     display: flex;
@@ -28,17 +28,29 @@
   border: none;
 }
 
+.product__image-container {
+  display: flex;
+}
+
 .product__image {
   width: 100%;
+  height: 100%;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     width: 334px;// временно скорее всего
-    height: 100%;
   }
 }
 
 .product__title {
   color: #000000;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.product__desc {
+  font-size: 13px;
+  line-height: 30px;
+  color: #444444;
 }
 
 .product__price {

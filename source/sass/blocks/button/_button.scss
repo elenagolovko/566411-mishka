@@ -9,22 +9,26 @@
   box-sizing: border-box;
 
   &--regular {
+    width: 100%;
     box-shadow: 0 0 0 2px #444444;
     background-color: #ffffff;
     color: #444444;
 
-    @media (min-width: map-get($breakpoints, mobile)) {
-      width: 230px;
+    @media (min-width: map-get($breakpoints, tablet)) {
+      // width: 230px;
     }
   }
 
   &--special {
+    width: 100%;
     background-color: #63d1bb;
     color: #ffffff;
   }
 
   &--small {
-    @media (min-width: map-get($breakpoints, mobile)) {
+    font-size: 18px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
       width: 175px;
     }
   }

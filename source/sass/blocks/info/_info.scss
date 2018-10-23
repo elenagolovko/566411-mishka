@@ -1,4 +1,5 @@
 .info {
+  position: relative;
   padding-top: 95px;
   background-image: url("../../../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -10,9 +11,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("../../../img/bg-zigzag-fill.svg"), url("../../../img/hero-tablet@1x.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom, 50%;
+    background-image: url("../../../img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -21px;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-image: url("../../../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {

@@ -12,6 +12,7 @@
   border: 1px solid #ececec;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,8 +20,8 @@
 }
 
 .product__info {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ececec;
+  // padding-bottom: 25px;
+  // border-bottom: 1px solid #ececec;
 }
 
 .product__cart {
@@ -42,15 +43,27 @@
 }
 
 .product__title {
+  margin: 0;
   color: #000000;
   font-size: 17px;
   line-height: 24px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin: 25px 0 15px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .product__desc {
   font-size: 13px;
   line-height: 30px;
   color: #444444;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 .product__price {
@@ -62,4 +75,5 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 0 27px 0;
+  border-top: 1px solid #ececec;
 }

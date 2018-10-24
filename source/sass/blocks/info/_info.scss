@@ -25,11 +25,16 @@
       background-image: url("../../../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
       background-position: 50%;
+
+      @media (min-width: map-get($breakpoints, desktop)) {
+        background-size: cover;
+      }
     }
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
     background-image: url("../../../img/hero-desktop@1x.jpg");
+    background-size: cover;
   }
 }
 

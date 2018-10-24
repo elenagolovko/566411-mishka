@@ -11,7 +11,7 @@
   padding: 30px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    padding-top: 0;
+    padding: 0 45px 45px 45px;
     order: 3;
   }
 }
@@ -45,15 +45,14 @@
     left: 10%;
     top: 50%;
     transform: translateY(-50%);
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 32px;
     background-image: url("../../../img/icon-video.svg");
     background-repeat: no-repeat;
-    background-size: cover;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      left: 30px;
-      top: 15px;
+      left: 7%;
+      top: 38%;
       transform: translate(0, 0);
     }
   }

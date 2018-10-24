@@ -1,8 +1,9 @@
 .info-navigation {
   &::after {
+    content: "";
+    position: absolute;
+
     @media (min-width: map-get($breakpoints, tablet)) {
-      content: "";
-      position: absolute;
       left: 0;
       height: 24px;
       max-height: 34px;
@@ -24,6 +25,12 @@
     display: flex;
     padding: 0 50px;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 0;
+
+    @include wrapper();
+  }
 }
 
 .info-navigation__item {
@@ -41,15 +48,14 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
+    padding-right: 30px;
+    transform: translateY(-50%);
     height: 70px;
     background-repeat: no-repeat;
-    background-size: cover;
   }
 
   &--interier {
     &::after {
-      right: 6%;
       width: 50px;
       background-image: url("../../../img/icon-interior.svg");
 
@@ -61,7 +67,7 @@
 
   &--toy {
     &::after {
-      width: 70px;
+      width: 59px;
       background-image: url("../../../img/icon-toy.svg");
 
       @media (min-width: map-get($breakpoints, tablet)) {

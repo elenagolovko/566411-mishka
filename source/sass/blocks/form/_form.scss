@@ -103,12 +103,13 @@
 
     @media (min-width: map-get($breakpoints, tablet)) {
       min-width: 33%;
+      margin-bottom: 23px;
     }
 
     &::before {
       border: 2px solid #444444;
       background-repeat: no-repeat;
-      top: 50%;
+      top: 40%;
       transform: translateY(-50%);
     }
   }
@@ -196,12 +197,17 @@
   color: #444444;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    margin: 0;
     font-size: 17px;
   }
 }
 
 .form__action {
   order: 2;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    order: 1;
+  }
 }
 
 .form__field-wrapper {
@@ -252,10 +258,15 @@
 }
 
 .form__input-wrapper {
+  margin-bottom: 20px;
+
   @media (min-width: map-get($breakpoints, tablet)) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 35px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -268,5 +279,6 @@
     padding: 0 50px 50px 50px;
     flex-direction: row;
     justify-content: space-between;
+    align-content: center;
   }
 }

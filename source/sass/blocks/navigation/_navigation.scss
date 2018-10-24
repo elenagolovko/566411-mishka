@@ -5,6 +5,12 @@
     position: static;
     width: 50%;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    width: 100%;
+
+    @include wrapper();
+  }
 }
 
 .navigation__toggle {
@@ -47,6 +53,7 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -61,12 +68,26 @@
     border-bottom: none;
   }
 
-  &--dropped {
+  &--tablet-dropped {
     @media (min-width: map-get($breakpoints, tablet)) {
       padding: 0;
       position: absolute;
       z-index: 10;
       bottom: -40px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      position: static;
+    }
+  }
+
+  &--desktop-dropped {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      padding: 0;
+      position: absolute;
+      z-index: 10;
+      bottom: -40px;
+      font-size: 15px;
     }
   }
 
@@ -74,9 +95,13 @@
     @media (min-width: map-get($breakpoints, tablet)) {
       order: 2;
       padding: 33px 0 33px 50px;
-      // border-bottom: 1px solid #ececec;
       width: 80%;
       box-sizing: border-box;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      width: auto;
+      order: 4;
     }
   }
 
@@ -85,6 +110,12 @@
       order: 3;
       font-size: 15px;
       left: 50px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      order: 1;
+      padding: 30px 30px 30px 0;
+      border-right: 1px solid #ececec;
     }
   }
 
@@ -97,6 +128,8 @@
 
     @media (min-width: map-get($breakpoints, desktop)) {
       margin-right: auto;
+      order: 2;
+      padding-left: 30px;
     }
   }
 
@@ -111,6 +144,14 @@
       border-right: 1px solid #ececec;
       // border-bottom: 1px solid #ececec;
       box-sizing: border-box;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      display: flex;
+      justify-content: flex-end;
+      order: 3;
+      padding: 30px 30px 30px 0;
+      border-left: none;
     }
   }
 
@@ -128,6 +169,7 @@
 
     @media (min-width: map-get($breakpoints, desktop)) {
       display: block;
+      border-right: none;
     }
   }
 
@@ -136,6 +178,7 @@
 
     @media (min-width: map-get($breakpoints, desktop)) {
       display: block;
+      left: 245px;
     }
   }
 }
@@ -156,6 +199,7 @@
 
     @media (min-width: map-get($breakpoints, desktop)) {
       position: static;
+      transform: translateX(0%);
     }
   }
 
@@ -165,6 +209,11 @@
 
     @media (min-width: map-get($breakpoints, tablet)) {
       left: -22px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      top: 0;
+      transform: translateY(0);
     }
   }
 }

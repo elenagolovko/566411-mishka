@@ -57,6 +57,10 @@
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: contain;
+
+    // @media (min-width: map-get($breakpoints, tablet)) {
+    //   bottom: -15px;
+    // }
   }
 }
 

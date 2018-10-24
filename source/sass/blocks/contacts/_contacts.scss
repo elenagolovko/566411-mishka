@@ -8,6 +8,7 @@
   list-style: none;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
   }
@@ -22,6 +23,7 @@
   color: #444444;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 17px;
     width: 45%;
   }
 }
@@ -46,16 +48,35 @@
   background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: bottom;
-
-  // FIXME: если ты подскажешь лучший способ сделать это подчеркивание будет здорово
 }
 
 .contacts__title {
+  position: relative;
   margin: 35px 0;
   padding: 0 30px;
   color: #000000;
   font-size: 18px;
   line-height: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 43px;
+    line-height: 50px;
+    margin: 50px 0 50px 0;
+    padding-left: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      transform: translateY(-50%);
+      width: 55px;
+      height: 85px;
+      background-image: url("../../../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+  }
 }
 
 .contacts__action {

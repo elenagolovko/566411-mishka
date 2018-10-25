@@ -1,13 +1,19 @@
-.best-product__description {
+.best-product__text {
   margin: 25px 0;
   font-size: 15px;
   line-height: 24px;
   color: #444444;
 
-  // @media (min-width: map-get($breakpoints, desktop)) {
-  //   max-width: 225px;
-  //   margin-left: auto;
-  // }
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-bottom: 60px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.best-product__description {
+  position: relative;
+  top: -102px;
 }
 
 .best-product__title {
@@ -25,9 +31,11 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     position: absolute;
-    top: 60px;
-    left: 370px;
+    top: 120px;
+    left: 220px;
     z-index: 10;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -72,8 +80,8 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    max-width: 225px;
-    margin-left: 325px;
+    max-width: 290px;
+    margin-left: 175px;
   }
 }
 
@@ -99,10 +107,10 @@
   font-weight: 700;
   line-height: 24px;
 
-  // @media (min-width: map-get($breakpoints, desktop)) {
-  //   max-width: 390px;
-  //   margin-left: auto;
-  // }
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .best-product__action {

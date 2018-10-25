@@ -16,6 +16,13 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-top: 45px;
+    margin-bottom: 40px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .about__list {
@@ -29,6 +36,10 @@
     flex-wrap: wrap;
     height: 405px;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    height: 500px;
+  }
 }
 
 .about__item {
@@ -38,6 +49,10 @@
 
   &:not(:last-of-type) {
     padding-bottom: 20px;
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      padding-bottom: 55px;
+    }
   }
 
   &::before {
@@ -98,5 +113,9 @@
   @media (min-width: map-get($breakpoints, tablet)) {
     font-size: 20px;
     word-break: break-word;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    line-height: 22px;
   }
 }

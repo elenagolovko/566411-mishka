@@ -61,6 +61,26 @@
     @media (min-width: map-get($breakpoints, tablet)) {
       height: 16px;
     }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      height: 30px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include wrapper();
+  }
+}
+
+.main-content__about {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include wrapper(700px);
   }
 }
 

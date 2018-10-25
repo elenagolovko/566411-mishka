@@ -37,6 +37,10 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 70px 0 90px 175px;
+  }
 }
 
 .reviews__actions {

@@ -16,6 +16,11 @@
       background-color: #f1f1f1;
     }
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
 }
 
 .form__field {
@@ -40,13 +45,17 @@
   font-weight: 700;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin-right: 120px;
+    margin-right: 68px;
     margin-top: 15px;
   }
 
   &--email {
     @media (min-width: map-get($breakpoints, tablet)) {
       margin-right: 105px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-right: 55px;
     }
   }
 
@@ -78,6 +87,10 @@
       padding-bottom: 23px;
     }
 
+    @media (min-width: map-get($breakpoints, desktop)) {
+      padding: 10px 0 23px 82px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -86,14 +99,29 @@
       width: 39px;
       height: 39px;
       box-sizing: border-box;
+
+      @media (min-width: map-get($breakpoints, desktop)) {
+        width: 55px;
+        height: 55px;
+      }
     }
   }
 
-  &--type::before {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 9px #ffffff;
-    border-radius: 50%;
-    border: 2px solid #444444;
+  &--type {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-bottom: 25px;
+    }
+
+    &::before {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 9px #ffffff;
+      border-radius: 50%;
+      border: 2px solid #444444;
+    }
   }
 
   &--color {
@@ -106,7 +134,16 @@
       margin-bottom: 23px;
     }
 
+    @media (min-width: map-get($breakpoints, desktop)) {
+      width: 150px;
+      min-width: unset;
+    }
+
     &::before {
+      @media (min-width: map-get($breakpoints, mobile)) {
+        top: 50%;
+      }
+
       border: 2px solid #444444;
       background-repeat: no-repeat;
       top: 40%;
@@ -141,6 +178,10 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     right: 25px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    right: 0;
   }
 }
 
@@ -217,6 +258,12 @@
   @media (min-width: map-get($breakpoints, tablet)) {
     flex-direction: row;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 55px;
+
+    @include wrapper(1050px);
+  }
 }
 
 .form__inputs-wrapper {
@@ -228,11 +275,20 @@
     width: 50%;
   }
 
+  @media (min-width: map-get($breakpoints, desktop)) {
+    left: -22px;
+  }
+
   &--colors {
     @media (min-width: map-get($breakpoints, tablet)) {
       width: 80%;
       flex-wrap: wrap;
       flex-direction: row;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      max-height: 200px;
+      width: 100%;
     }
   }
 
@@ -240,6 +296,10 @@
   &--email {
     @media (min-width: map-get($breakpoints, tablet)) {
       width: 500px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      width: 100%;
     }
   }
 
@@ -253,6 +313,24 @@
   &--additional {
     @media (min-width: map-get($breakpoints, tablet)) {
       width: 100%;
+    }
+  }
+
+  &--colors,
+  &--name,
+  &--tel,
+  &--email,
+  &--additional {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      @include wrapper(700px, 0);
+    }
+  }
+
+  &--type {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      // @include wrapper(350px);
+
+      // padding-left: 57px;
     }
   }
 }
@@ -279,6 +357,10 @@
     padding: 0 50px 50px 50px;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    @include wrapper(700px);
   }
 }

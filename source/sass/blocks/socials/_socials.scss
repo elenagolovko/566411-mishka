@@ -7,6 +7,12 @@
     align-items: flex-end;
     border: none;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin: auto;
+    padding-bottom: 0;
+    justify-content: center;
+  }
 }
 
 .socials__item {
@@ -32,5 +38,9 @@
     width: 100%;
     align-items: center;
     padding-bottom: 3px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    max-width: 150px;
   }
 }

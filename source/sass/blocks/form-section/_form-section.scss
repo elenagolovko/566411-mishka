@@ -10,4 +10,10 @@
     font-size: 17px;
     line-height: 30px;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 100px 0 0 0;
+
+    @include wrapper(700px);
+  }
 }

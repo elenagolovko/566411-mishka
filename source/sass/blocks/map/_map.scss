@@ -17,4 +17,8 @@
     background-image: url("../../../img/icon-map-pin.svg");
     background-repeat: no-repeat;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    min-width: 525px;
+  }
 }

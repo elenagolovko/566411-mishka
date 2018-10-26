@@ -6,9 +6,9 @@
   transform: translate($transform);
 }
 
-@mixin wrapper($width: 1050px) {
+@mixin wrapper($width: 1050px, $margin-left: auto) {
   max-width: $width;
-  margin: 0 auto;
+  margin: 0 auto 0 $margin-left;
 }
 
 @mixin visually-hidden() {

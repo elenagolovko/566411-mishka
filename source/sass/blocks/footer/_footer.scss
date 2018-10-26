@@ -7,3 +7,9 @@
     justify-content: flex-end;
   }
 }
+
+.footer__logo {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 33.33%;
+  }
+}

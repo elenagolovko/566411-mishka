@@ -39,7 +39,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding: 70px 0 90px 175px;
+    padding: 70px 0 50px 175px;
   }
 }
 
@@ -51,8 +51,12 @@
   @media (min-width: map-get($breakpoints, tablet)) {
     width: 165px;
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     right: 10%;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    bottom: 18%;
   }
 }
 

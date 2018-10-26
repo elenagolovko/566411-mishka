@@ -12,8 +12,10 @@
 }
 
 .best-product__description {
-  position: relative;
-  top: -102px;
+  @media (min-width: map-get($breakpoints, desktop)) {
+    position: relative;
+    top: -102px;
+  }
 }
 
 .best-product__title {

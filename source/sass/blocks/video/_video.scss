@@ -6,4 +6,8 @@
 
 .video__block {
   width: 100%;
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    height: 100%;
+  }
 }

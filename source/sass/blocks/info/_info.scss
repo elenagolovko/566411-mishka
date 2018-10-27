@@ -8,6 +8,7 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     height: 606px;
+    padding-top: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,15 +41,21 @@
 
 .info__title {
   padding: 0 30px;
-  margin: 0 0 115px 0;
+  margin: 0 0 97px 0;
   font-size: 27px;
   color: #000000;
   line-height: 30px;
   text-align: center;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    padding: 7% 15%;
+    padding: 3% 15%;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-top: 24px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }

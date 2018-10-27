@@ -2,13 +2,32 @@
   padding: 30px;
   background-color: #f1f1f1;
 
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.footer__wrapper {
   @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 50px;
     display: flex;
     justify-content: flex-end;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    @include wrapper(1050px);
+
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .footer__logo {
+  background-image: url("../../../img/logo-footer.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+
   @media (min-width: map-get($breakpoints, tablet)) {
     width: 33.33%;
   }

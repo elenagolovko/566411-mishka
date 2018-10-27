@@ -29,7 +29,8 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     min-width: 350px;
-    padding: 0;
+    padding-top: 108px;
+    padding-right: 13px;
     flex-direction: column;
     justify-content: center;
   }
@@ -40,7 +41,7 @@
   display: flex;
   flex-direction: row;
   font-size: 15px;
-  line-height: 30px;
+  // line-height: 30px;
   color: #444444;
 
   @media (min-width: map-get($breakpoints, tablet)) {
@@ -58,6 +59,8 @@
 }
 
 .contacts__value {
+  line-height: 30px;
+
   &--address {
     width: 204px;
   }
@@ -68,10 +71,13 @@
   color: #444444;
   text-decoration: none;
 
-  background-image: linear-gradient(to bottom, #ffffff, #62d1ba);
-  background-size: 100% 1px;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  border-bottom: 1px solid #62d1ba;
+  line-height: 30px;
+
+  // background-image: linear-gradient(to bottom, #ffffff, #62d1ba);
+  // background-size: 100% 1px;
+  // background-repeat: no-repeat;
+  // background-position: bottom;
 }
 
 .contacts__title {
@@ -109,8 +115,11 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     position: absolute;
-    left: 175px;
+    left: 156px;
     padding: 0;
+    font-size: 53px;
+    line-height: 57px;
+    margin: 75px 0 0 0;
   }
 }
 
@@ -118,6 +127,7 @@
   margin: 40px 0 10px 0;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    margin-top: 50px;
     width: 230px;
     text-align: center;
   }

@@ -1,6 +1,7 @@
 .card {
   &--best-product {
     padding: 30px;
+    padding-bottom: 14px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
       padding: 50px;
@@ -9,6 +10,7 @@
     @media (min-width: map-get($breakpoints, desktop)) {
       position: relative;
       padding-top: 235px;
+      padding-bottom: 76px;
     }
   }
 }
@@ -32,7 +34,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    top: -105px;
-    left: 40px;
+    top: -91px;
+    left: 43px;
   }
 }

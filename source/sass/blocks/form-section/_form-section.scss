@@ -1,6 +1,6 @@
 .form-section__description {
   margin: 0;
-  padding: 30px;
+  padding: 20px 30px;
   font-size: 13px;
   line-height: 24px;
   color: #444444;
@@ -12,7 +12,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding: 100px 0 0 0;
+    padding: 137px 0 0 0;
 
     @include wrapper(700px);
   }

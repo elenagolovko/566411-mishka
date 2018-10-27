@@ -92,6 +92,26 @@
   }
 
   &--cart {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    &:hover .navigation__icon,
+    &:focus .navigation__icon {
+      fill: #63d1bb;
+    }
+
+    &:hover .navigation__link,
+    &:focus .navigation__link {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:active .navigation__icon,
+    &:active .navigation__link {
+      fill: rgba(99, 209, 187, 0.3);
+    }
+
     @media (min-width: map-get($breakpoints, tablet)) {
       order: 2;
       padding: 33px 0 33px 50px;
@@ -186,12 +206,23 @@
 .navigation__icon {
   position: absolute;
   left: 30px;
+  transition: fill 0.25s ease-in-out;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     position: relative;
   }
 
   &--search {
+    &:hover,
+    &:focus {
+      fill: #63d1bb;
+      cursor: pointer;
+    }
+
+    &:active {
+      fill: rgba(99, 209, 187, 0.3);
+    }
+
     @media (min-width: map-get($breakpoints, tablet)) {
       left: 50%;
       transform: translateX(-50%);
@@ -222,6 +253,16 @@
   color: #000000;
   text-decoration: none;
   font-weight: 700;
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 
   &--search {
     @media (min-width: map-get($breakpoints, tablet)) {

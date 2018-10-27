@@ -4,17 +4,21 @@
   line-height: 24px;
   color: #444444;
 
-  @media (min-width: map-get($breakpoints, desktop)) {
+  @media (min-width: map-get($breakpoints, tablet)) {
     margin-bottom: 60px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-bottom: 43px;
   }
 }
 
 .best-product__description {
   @media (min-width: map-get($breakpoints, desktop)) {
     position: relative;
-    top: -102px;
+    top: -58px;
   }
 }
 
@@ -33,7 +37,7 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     position: absolute;
-    top: 120px;
+    top: 135px;
     left: 220px;
     z-index: 10;
     font-size: 53px;

@@ -7,7 +7,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 0;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid #dfdfdf;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
@@ -19,6 +19,17 @@
   display: block;
   margin-bottom: 20px;
   text-align: center;
+  transition: opacity 0.25s ease-in-out;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: map-get($breakpoints, tablet)) {
     // width: 50%;

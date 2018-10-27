@@ -14,9 +14,22 @@
     background-color: #ffffff;
     color: #444444;
     font-size: 17px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
     @media (min-width: map-get($breakpoints, tablet)) {
       width: 230px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #444444;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -47,9 +60,39 @@
 
   &--interier {
     background-color: #63d1bb;
+
+    &:hover,
+    &:focus {
+      background-color: #59d5bc;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      fill: #29a592;
+    }
+
+    &:active::after,
+    &:active .info-navigation__item {
+      opacity: 0.3;
+    }
   }
 
   &--toy {
     background-color: #56c3b2;
+
+    &:hover,
+    &:focus {
+      background-color: #46c1ae;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      fill: #239f8e;
+    }
+
+    &:active::after,
+    &:active .info-navigation__item {
+      opacity: 0.3;
+    }
   }
 }

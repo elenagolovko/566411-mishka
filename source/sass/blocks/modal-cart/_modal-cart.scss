@@ -45,7 +45,13 @@
   height: 52px;
   border: 2px solid #ececec;
   box-sizing: border-box;
-  transition: border 0.15s ease-out;
+  transition: border 0.25s ease-out;
+
+  &:hover,
+  &:focus {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+    cursor: pointer;
+  }
 
   // &:not(:last-of-type) {
   //   margin-right: 19px;

@@ -23,6 +23,16 @@
 
 .socials__link {
   display: flex;
+
+  &:hover .socials__icon,
+  &:focus .socials__icon {
+    fill: #46c1ae;
+    cursor: pointer;
+  }
+
+  &:active .socials__icon {
+    fill: #bde3dd;
+  }
 }
 
 .socials__list {
@@ -43,4 +53,8 @@
   @media (min-width: map-get($breakpoints, desktop)) {
     max-width: 150px;
   }
+}
+
+.socials__icon {
+  transition: fill 0.25s ease-in-out;
 }

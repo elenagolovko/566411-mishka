@@ -35,6 +35,7 @@
 
 .info-navigation__item {
   display: block;
+  position: relative;
   margin: 0;
   width: 100px;
   text-decoration: none;
@@ -42,6 +43,12 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
+}
+
+.info-navigation__link {
+  display: block;
+  position: relative;
+  padding: 30px;
 
   &::after {
     content: "";
@@ -75,14 +82,25 @@
       }
     }
   }
-}
 
-.info-navigation__link {
-  display: block;
-  position: relative;
-  padding: 30px;
+  &:hover,
+  &:focus {
+    padding: 39px 37px;
+    cursor: pointer;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: translateY(calc(-50% - 5px));
+  }
+
+  &:hover .info-navigation__item,
+  &:focus .info-navigation__item {
+    top: -5px;
+  }
 
   @media (min-width: map-get($breakpoints, tablet)) {
     width: 100%;
+    padding: 37px;
   }
 }

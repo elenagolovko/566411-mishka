@@ -70,9 +70,16 @@
   display: block;
   color: #444444;
   text-decoration: none;
-
+  transition: color 0.25s ease-in-out, border 0.25s ease-in-out;
   border-bottom: 1px solid #62d1ba;
   line-height: 30px;
+
+  &:hover,
+  &:focus {
+    color: #46c1ae;
+    border-bottom-color: #46c1ae;
+    cursor: pointer;
+  }
 
   // background-image: linear-gradient(to bottom, #ffffff, #62d1ba);
   // background-size: 100% 1px;

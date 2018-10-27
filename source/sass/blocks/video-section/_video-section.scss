@@ -106,6 +106,7 @@
 
 .video-section__play {
   position: absolute;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -115,4 +116,27 @@
   height: 76px;
   background-image: url("../../../img/icon-play.svg");
   background-repeat: no-repeat;
+  transition: transform 0.25s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2) translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.8) translate(-50%, -50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 21px;
+      width: 100px;
+      height: 76px;
+      background-color: #ffffff;
+      opacity: 0.5;
+    }
+  }
 }

@@ -77,6 +77,7 @@
   box-shadow: 0 0 1px 0 #b9b9b9;
   background-repeat: no-repeat;
   background-position: 50%;
+  transition: opacity 0.25s ease-out;
 
   &--previous {
     background-image: url("../../../img/icon-left-arrow.svg");
@@ -102,6 +103,16 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

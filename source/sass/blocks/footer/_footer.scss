@@ -24,11 +24,21 @@
 }
 
 .footer__logo {
-  background-image: url("../../../img/logo-footer.svg");
-  background-repeat: no-repeat;
-  background-position-y: 50%;
-
   @media (min-width: map-get($breakpoints, tablet)) {
     width: 33.33%;
+  }
+}
+
+.footer__logo-icon {
+  transition: fill 0.25s ease-in-out;
+
+  &:hover,
+  &:focus {
+    fill: #46c1ae;
+    cursor: pointer;
+  }
+
+  &:active {
+    fill: #bde3dd;
   }
 }

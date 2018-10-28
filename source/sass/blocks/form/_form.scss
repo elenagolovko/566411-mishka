@@ -15,25 +15,21 @@
     margin-bottom: 30px;
 
     &--type {
-      padding-bottom: 0;
+      padding-bottom: 7px;
+    }
+
+    &--color {
+      padding-bottom: 47px;
     }
 
     &--name {
       padding-top: 17px;
-      padding-bottom: 0;
+      padding-bottom: 20px;
     }
 
     &--contacts {
-      padding-bottom: 34px;
-    }
-
-    &--additional {
-      padding-top: 20px;
-      padding-bottom: 28px;
-
-      @media (min-width: map-get($breakpoints, desktop)) {
-        padding-bottom: 13px;
-      }
+      padding-top: 65px;
+      padding-bottom: 58px;
     }
 
     &:nth-child(2n) {
@@ -41,8 +37,36 @@
     }
   }
 
+  &--additional {
+    margin-bottom: 8px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding-bottom: 46px;
+      padding-top: 7px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      padding-top: 7px;
+      padding-bottom: 42px;
+    }
+  }
+
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding-left: 7%;
+    padding-left: 0;
+    padding-right: 0;
+
+    &--color {
+      padding-bottom: 21px;
+    }
+
+    &--name {
+      padding-bottom: 19px;
+    }
+
+    &--contacts {
+      padding-top: 66px;
+      padding-bottom: 48px;
+    }
   }
 }
 
@@ -54,29 +78,56 @@
   flex-direction: column;
   border: none;
 
+  @media (min-width: map-get($breakpoints, tablet)) {
+    max-width: 520px;
+    margin-left: auto;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    left: -12px;
+
+    @include wrapper(722px);
+  }
+
   &--tel {
     @media (min-width: map-get($breakpoints, tablet)) {
       margin-bottom: 30px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &--color {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      @include wrapper(810px);
     }
   }
 }
 
 .form__legend {
   // position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   line-height: 16px;
   text-transform: uppercase;
   color: #63d1bb;
   font-weight: 700;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin-right: 120px;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    position: absolute;
+    top: 18px;
+    left: -146px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    margin-right: 85px;
+    // DESKTOP
+    top: 0;
+    left: -95px;
+
+    &--color {
+      left: -50px;
+    }
   }
 
   &--email {
@@ -84,9 +135,9 @@
       margin-right: 106px;
     }
 
-    @media (min-width: map-get($breakpoints, desktop)) {
-      margin-right: 72px;
-    }
+    // @media (min-width: map-get($breakpoints, desktop)) {
+    //   margin-right: 72px;
+    // }
   }
 
   &::before {
@@ -109,9 +160,14 @@
   font-weight: 700;
   color: #000000;
 
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
   &--type,
   &--color {
-    padding: 10px 0 10px 57px;
+    padding: 10px 0 10px 65px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
       // padding-bottom: 23px;
@@ -144,7 +200,7 @@
     }
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      margin-bottom: 27px;
+      margin-bottom: 25px;
       padding: 17px 0 10px 83px;
     }
 
@@ -178,13 +234,17 @@
   }
 
   &--color {
-    &:not(:last-of-type) {
-      margin-bottom: 20px;
+    margin-bottom: 18px;
+
+    @media (min-width: map-get($breakpoints, mobile)) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
 
     @media (min-width: map-get($breakpoints, tablet)) {
       min-width: 33%;
-      margin-bottom: 23px;
+      margin-bottom: 17px;
 
       &:nth-of-type(5),
       &:last-of-type {
@@ -193,23 +253,29 @@
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
-      width: 150px;
+      width: 215px;
       min-width: unset;
+      margin-bottom: 28px;
+      box-sizing: border-box;
 
-      &:nth-of-type(4) {
-        margin-bottom: 0;
-      }
+      // &:nth-of-type(4) {
+      //   margin-bottom: 0;
+      // }
+
+      // &:not(:last-of-type) {
+      //   margin-bottom: 41px;
+      // }
     }
 
     &::before {
+      @media (min-width: map-get($breakpoints, mobile)) {
+        top: 50%;
+      }
+
       @media (min-width: map-get($breakpoints, tablet)) {
         top: 40%;
         width: 55px;
         height: 55px;
-      }
-
-      @media (min-width: map-get($breakpoints, mobile)) {
-        top: 50%;
       }
 
       @media (min-width: map-get($breakpoints, desktop)) {
@@ -240,6 +306,11 @@
       padding-top: 10px;
       margin-right: 20px;
     }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-right: 30px;
+      padding-top: 16px;
+    }
   }
 }
 
@@ -247,10 +318,18 @@
   background-color: #63d1ba;
 }
 
+.form__radio:focus + .form__label::before {
+  border-color: #62d1ba;
+}
+
 .form__checkbox:checked + .form__label::before {
   background-image: url("../../../img/icon-tick.svg");
   background-size: 70%;
   background-position: 50%;
+}
+
+.form__checkbox:focus + .form__label::before {
+  border-color: #62d1ba;
 }
 
 .form__icon {
@@ -302,6 +381,10 @@
 
   &--tel,
   &--email {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      padding-top: 0;
+    }
+
     @media (min-width: map-get($breakpoints, tablet)) {
       background-color: #f1f1f1;
     }
@@ -318,12 +401,11 @@
 
   &--textarea {
     min-height: 142px;
-    margin-top: 15px;
     padding: 17px;
     border: 2px solid #000000;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      margin-top: 0;
+      margin-top: 15px;
     }
   }
 }
@@ -368,9 +450,11 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding-left: 55px;
+    padding-left: 22px;
 
-    @include wrapper(1050px);
+    &--color {
+      padding-left: 65px;
+    }
   }
 }
 
@@ -380,16 +464,18 @@
   flex-direction: column;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    width: 50%;
+    // width: 50%;
+    padding-left: 20px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    left: -22px;
+    left: 0;
+    padding-left: 0;
   }
 
   &--colors {
     @media (min-width: map-get($breakpoints, tablet)) {
-      width: 80%;
+      width: 100%;
       flex-wrap: wrap;
       flex-direction: row;
     }
@@ -397,6 +483,7 @@
     @media (min-width: map-get($breakpoints, desktop)) {
       max-height: 200px;
       width: 100%;
+      justify-content: space-between;
     }
   }
 
@@ -412,11 +499,15 @@
   }
 
   &--tel {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      padding-left: 12px;
+      // padding-left: 12px;
       margin-bottom: 0;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-bottom: 15px;
     }
   }
 
@@ -433,7 +524,7 @@
   &--email,
   &--additional {
     @media (min-width: map-get($breakpoints, desktop)) {
-      @include wrapper(700px, 0);
+      // @include wrapper(700px, 0);
     }
   }
 
@@ -449,12 +540,22 @@
 .form__input-wrapper {
   margin-bottom: 16px;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   @media (min-width: map-get($breakpoints, tablet)) {
     display: flex;
     justify-content: space-between;
 
     &:not(:last-of-type) {
-      margin-bottom: 30px;
+      margin-bottom: 22px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    &:not(:last-of-type) {
+      margin-bottom: 22px;
     }
   }
 }

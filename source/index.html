@@ -53,23 +53,25 @@
       <h1 class="main__title visually-hidden">Интернет-магазин "Мишка"</h1>
       <section class="main-content__info info">
         <h2 class="info__title">Милые штуки ручной работы для дома</h2>
-        <nav class="info__navigation info-navigation">
-          <div class="info-navigation__list">
+        <ul class="info-navigation__list">
+          <li class="info-navigation__list-item">
             <a class="info-navigation__link info-navigation__link--interier button--interier" tabindex="0">
               <p class="info-navigation__item info-navigation__item--interier ">Предметы  интерьера</p>
             </a>
+          </li>
+          <li class="info-navigation__list-item">
             <a class="info-navigation__link info-navigation__link--toy button--toy" tabindex="0">
               <p class="info-navigation__item info-navigation__item--toy">Детские игрушки</p>
             </a>
-          </div>
-        </nav>
+          </li>
+        </ul>
       </section>
       <section class="main-content__card card card--best-product">
         <h2 class="card__title">Товар недели</h2>
         <article class="card__best-product best-product">
-          <h3 class="best-product__title">Вязаные корзинки</h3>
           <div class="best-product__wrapper">
             <div class="best-product__description">
+              <h3 class="best-product__title">Вязаные корзинки</h3>
               <p class="best-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах</p>
               <ul class="best-product__chars">
                 <li class="best-product__char">
@@ -101,10 +103,10 @@
             <div class="best-product__image-wrapper">
               <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Тройной сет - лучший продукт недели">
             </div>
-            <div class="best-product__footer">
-              <div class="best-product__price">Цена: 990 руб.</div>
-              <button class="best-product__action button button--regular button--big" type="button">ЗАКАЗАТЬ</button>
-            </div>
+          </div>
+          <div class="best-product__footer">
+            <div class="best-product__price">Цена: 990 руб.</div>
+            <button class="best-product__action button button--regular button--big" type="button">ЗАКАЗАТЬ</button>
           </div>
         </article>
       </section>
@@ -198,7 +200,7 @@
             </g>
           </svg>
         </section>
-        <section class="footer__social socials">
+        <section class="footer__social-list socials">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="socials__list">
             <li class="socials__item">

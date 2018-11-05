@@ -79,7 +79,7 @@
     background-size: cover;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      height: 16px;
+      height: 3%;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {

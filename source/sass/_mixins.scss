@@ -8,7 +8,7 @@
 
 @mixin wrapper($width: 1050px, $margin-left: auto) {
   max-width: $width;
-  margin: 0 auto 0 $margin-left;
+  margin: 0 $margin-left;
 }
 
 @mixin visually-hidden() {

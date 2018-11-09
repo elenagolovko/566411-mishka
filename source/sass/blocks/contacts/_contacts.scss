@@ -8,11 +8,18 @@
   @media (min-width: map-get($breakpoints, desktop)) {
     padding: 95px 0;
     position: relative;
-    display: flex;
+    // display: flex;
     justify-content: flex-end;
     // padding-left: 175px;
 
     @include wrapper(1050px);
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -25,14 +32,14 @@
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
+    // Flex на планшетах для становления
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
+    padding-right: 50px;
+    display: block;
     min-width: 350px;
-    padding-top: 108px;
-    padding-right: 13px;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 40px;
   }
 }
 
@@ -46,11 +53,11 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     font-size: 17px;
-    width: 45%;
+    width: 100%;
   }
 
-  @media (min-width: map-get($breakpoints, tablet)) {
-    width: 100%;
+  @media (min-width: map-get($breakpoints, desktop)) {
+    justify-content: flex-end;
   }
 }
 
@@ -80,15 +87,9 @@
     border-bottom-color: #46c1ae;
     cursor: pointer;
   }
-
-  // background-image: linear-gradient(to bottom, #ffffff, #62d1ba);
-  // background-size: 100% 1px;
-  // background-repeat: no-repeat;
-  // background-position: bottom;
 }
 
 .contacts__title {
-  position: relative;
   margin: 35px 0;
   padding: 0 30px;
   color: #000000;
@@ -96,6 +97,9 @@
   line-height: 30px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 43px;
     line-height: 50px;
     margin: 50px 0 50px 0;
@@ -103,10 +107,7 @@
 
     &::after {
       content: "";
-      position: absolute;
-      top: 50%;
-      right: 50px;
-      transform: translateY(-50%);
+      display: block;
       width: 55px;
       height: 85px;
       background-image: url("../../../img/icon-flag.svg");
@@ -114,19 +115,19 @@
       background-position: 50%;
 
       @media (min-width: map-get($breakpoints, desktop)) {
-        right: 0;
-        left: -110px;
+        margin-right: 50px;
       }
     }
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    position: absolute;
-    left: 156px;
+    // position: absolute;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     padding: 0;
     font-size: 53px;
     line-height: 57px;
-    margin: 75px 0 0 0;
+    margin: 60px 0 0 0;
   }
 }
 
@@ -146,7 +147,7 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     position: absolute;
-    bottom: 87px;
-    left: 150px;
+    bottom: 86px;
+    left: 155px;
   }
 }

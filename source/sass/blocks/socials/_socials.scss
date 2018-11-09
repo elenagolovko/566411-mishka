@@ -1,4 +1,4 @@
-.socials {
+.sc-nets {
   border-bottom: 1px solid #e5e5e5;
 
   @media (min-width: map-get($breakpoints, tablet)) {
@@ -15,27 +15,27 @@
   }
 }
 
-.socials__item {
+.sc-nets__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.socials__link {
+.sc-nets__link {
   display: flex;
 
-  &:hover .socials__icon,
-  &:focus .socials__icon {
+  &:hover .sc-nets__icon,
+  &:focus .sc-nets__icon {
     fill: #46c1ae;
     cursor: pointer;
   }
 
-  &:active .socials__icon {
+  &:active .sc-nets__icon {
     fill: #bde3dd;
   }
 }
 
-.socials__list {
+.sc-nets__list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -55,6 +55,6 @@
   }
 }
 
-.socials__icon {
+.sc-nets__icon {
   transition: fill 0.25s ease-in-out;
 }

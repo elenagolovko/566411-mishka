@@ -1,13 +1,14 @@
 .video-section__content {
+  position: relative;
   border: 1px solid #ececec;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    position: static;
     display: flex;
     flex-direction: column;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    position: relative;
     flex-direction: row;
   }
 }
@@ -17,22 +18,24 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     padding: 0 45px 45px 45px;
-    order: 3;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
     width: 30%;
     display: flex;
     flex-direction: column;
-    padding: 180px 0 57px 84px;
+    padding: 0 50px 57px 60px;
   }
 }
 
 .video-section__video {
-  position: relative;
+  top: 105px;
+  position: absolute;
+  min-height: 150px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    order: 1;
+    top: 0;
+    position: relative;
     height: 450px;
   }
 
@@ -43,46 +46,40 @@
 
 .video-section__title {
   margin: 0;
-  position: relative;
-  padding: 27px 0 25px 96px;
+  // position: relative;
+  padding: 0 0 202px 0;
   text-align: left;
+  display: flex;
+  align-items: center;
   color: #000000;
   font-size: 17px;
   line-height: 24px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    padding: 38px 0 38px 96px;
-    order: 2;
+    padding: 38px 0;
     font-size: 20px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    position: absolute;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
     width: 200px;
     right: 180px;
-    top: 55px;
   }
 
   &::before {
     content: "";
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
+    display: block;
+    margin-right: 20px;
+
+    width: 50px;
     height: 32px;
     background-image: url("../../../img/icon-video.svg");
     background-repeat: no-repeat;
 
-    @media (min-width: map-get($breakpoints, tablet)) {
-      left: 7%;
-      top: 31%;
-      transform: translate(0, 0);
-    }
-
     @media (min-width: map-get($breakpoints, desktop)) {
-      left: 100px;
-      top: -22px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -129,7 +126,8 @@
 
     &::before {
       content: "";
-      position: absolute;
+      display: block;
+      // position: absolute;
       top: 0;
       left: 0;
       border-radius: 21px;

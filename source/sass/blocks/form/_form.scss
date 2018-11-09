@@ -334,11 +334,11 @@
 
 .form__icon {
   position: absolute;
-  top: 5px;
   right: 5px;
   transition: fill 0.25s ease-in-out;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    top: 5px;
     right: 25px;
   }
 
@@ -459,7 +459,6 @@
 }
 
 .form__inputs-wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -469,21 +468,20 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    left: 0;
-    padding-left: 0;
+    // left: 0;
   }
 
   &--colors {
     @media (min-width: map-get($breakpoints, tablet)) {
-      width: 100%;
       flex-wrap: wrap;
       flex-direction: row;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
-      max-height: 200px;
       width: 100%;
+      max-height: 200px;
       justify-content: space-between;
+      padding-left: 67px;
     }
   }
 

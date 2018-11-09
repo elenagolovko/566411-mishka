@@ -38,11 +38,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 500px;
+    max-height: 445px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    // height: 500px;
+    max-height: 500px;
   }
 }
 

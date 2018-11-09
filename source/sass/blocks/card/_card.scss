@@ -4,11 +4,10 @@
     padding-bottom: 14px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      padding: 0 50px 50px 50px;
+      padding: 50px;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
-      display: flex;
       padding-top: 70px;
       padding-bottom: 76px;
     }
@@ -16,8 +15,7 @@
 }
 
 .card__title {
-  position: relative;///!!!!!!!!!!!!!!
-  bottom: -1.7rem;
+  font-weight: 700;
   margin: 6px 0 0 0;
   font-size: 17px;
   line-height: 20px;
@@ -25,9 +23,10 @@
   text-transform: uppercase;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    position: static;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 11px;
+    margin-bottom: 54px;
+    // margin-top: 50px;
+    // margin-bottom: 50px;
     margin-left: auto;
     max-width: 80px;
     text-align: center;
@@ -37,5 +36,6 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     margin-top: 70px;
+    margin-left: 0;
   }
 }

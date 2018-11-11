@@ -34,15 +34,17 @@
 }
 
 .best-product__heading {
+  display: flex;
+  flex-direction: column-reverse;
+
   @media (min-width: map-get($breakpoints, tablet)) {
-    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    position: relative;
     align-items: center;
-    position: absolute;
     width: 673px;
     margin-left: 38px;
   }
@@ -99,6 +101,7 @@
   @media (min-width: map-get($breakpoints, desktop)) {
     max-width: 875px;
     margin-left: auto;
+    margin-top: -155px;
     align-items: flex-start;
   }
 }

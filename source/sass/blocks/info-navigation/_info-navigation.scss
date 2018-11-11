@@ -2,24 +2,24 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 50px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 0;
+    min-width: 1050px;
+    margin: 0 auto;
+  }
 }
 
 .info-navigation__item {
-  position: relative;
-  width: 100%;
-  padding: 30px;
-
-  &--interier {
-    background-color: #63d1bb;
-  }
-
-  &--toy {
-    background-color: #56c3b2;
-  }
-}
-
-.info-navigation__link {
+  position: relative; //!!!Hover
   display: block;
+  margin: 0;
   width: 100px;
   text-decoration: none;
   color: #ffffff;
@@ -27,29 +27,71 @@
   font-weight: 700;
   line-height: 24px;
 
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.info-navigation__list-item {
+  display: block;
+  width: 100%;
+}
+
+.info-navigation__link {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+
   &::after {
     content: "";
-    position: absolute;
+    position: relative; //!!Hover
+    display: block;
+    right: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
     height: 70px;
     background-repeat: no-repeat;
-    background-size: cover;
   }
 
   &--interier {
     &::after {
-      right: 80px;
       width: 50px;
       background-image: url("../../../img/icon-interior.svg");
+
+      @media (min-width: map-get($breakpoints, tablet)) {
+        right: 0;
+      }
     }
   }
 
   &--toy {
     &::after {
-      right: 62px;
-      width: 70px;
+      width: 59px;
       background-image: url("../../../img/icon-toy.svg");
+
+      @media (min-width: map-get($breakpoints, tablet)) {
+        right: 0;
+      }
     }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    top: -5px;
+    // transform: translateY(calc(-50% - 5px));
+  }
+
+  &:hover .info-navigation__item,
+  &:focus .info-navigation__item {
+    top: -5px;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 37px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    width: 100%;
   }
 }

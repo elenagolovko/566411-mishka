@@ -1,29 +1,78 @@
 .about {
   padding: 30px;
   color: #000000;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 50px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-bottom: 0;
+  }
+}
+
+.about__title {
+  margin: 30px 0 20px 0;
+  line-height: 30px;
+  font-size: 25px;
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-top: 45px;
+    margin-bottom: 40px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .about__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 445px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    max-height: 500px;
+  }
 }
 
 .about__item {
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  // position: relative;
+  // padding-top: 60px;
   font-weight: 700;
+
+  &:not(:last-of-type) {
+    padding-bottom: 20px;
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      padding-bottom: 55px;
+    }
+  }
 
   &::before {
     content: "";
-    position: absolute;
-    top: 7%;
+    display: block;
+    // position: absolute;
+    top: 0;
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: 50%;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 45%;
+    padding-top: 0;
   }
 
   &--flower {
@@ -66,4 +115,13 @@
 .about__text {
   margin: 0;
   text-align: left;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 20px;
+    word-break: break-word;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    line-height: 22px;
+  }
 }

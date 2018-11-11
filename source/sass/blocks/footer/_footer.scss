@@ -1,4 +1,47 @@
 .footer {
   padding: 30px;
   background-color: #f1f1f1;
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 0;
+  }
+}
+
+.footer__wrapper {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    @include wrapper(1050px);
+
+    padding: 50px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.footer__logo {
+  display: none;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 33.33%;
+    display: block;
+  }
+}
+
+.footer__logo-icon {
+  transition: fill 0.25s ease-in-out;
+
+  &:hover,
+  &:focus {
+    fill: #46c1ae;
+    cursor: pointer;
+  }
+
+  &:active {
+    fill: #bde3dd;
+  }
 }

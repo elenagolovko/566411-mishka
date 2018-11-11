@@ -1,5 +1,14 @@
 .reviews {
-  padding: 30px;
+  position: relative;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-bottom: 70px;
+  }
 }
 
 .reviews__list {
@@ -8,14 +17,56 @@
   list-style: none;
 }
 
+.review__content {
+  margin: 0;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-bottom: 25px;
+  }
+}
+
 .reviews__item {
   margin-bottom: 35px;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.reviews__wrapper {
+  padding: 0 30px 30px 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 80px 50px 4px 50px;
+    background-image: url("../../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 70px 0 50px 160px;
+  }
 }
 
 .reviews__actions {
   display: flex;
   flex-direction: row;
   margin-bottom: 38px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 165px;
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    bottom: 20%;
+    right: 2%;
+  }
 }
 
 .reviews__action {
@@ -26,6 +77,7 @@
   box-shadow: 0 0 1px 0 #b9b9b9;
   background-repeat: no-repeat;
   background-position: 50%;
+  transition: opacity 0.25s ease-out;
 
   &--previous {
     background-image: url("../../../img/icon-left-arrow.svg");
@@ -34,15 +86,61 @@
   &--next {
     background-image: url("../../../img/icon-right-arrow.svg");
   }
+
+  &--feedback {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      position: absolute;
+      width: 165px;
+      top: 80px;
+      right: 50px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      top: 88px;
+      right: 14px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .reviews__title {
+  margin: 20px 0 30px 0;
   color: #000000;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin-bottom: 60px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-top: 7px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .review__author {
+  margin-top: 25px;
   font-weight: 700;
   color: #000000;
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 17px;
+  }
 }

@@ -1,5 +1,4 @@
 .button {
-  width: 100%;
   padding: 15px;
   text-align: center;
   text-transform: uppercase;
@@ -7,15 +6,97 @@
   border: none;
   font-weight: 700;
   line-height: 20px;
+  box-sizing: border-box;
 
   &--regular {
+    width: 100%;
     box-shadow: 0 0 0 2px #444444;
     background-color: #ffffff;
     color: #444444;
+    font-size: 17px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      width: 230px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #444444;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &--special {
+    width: 100%;
     background-color: #63d1bb;
     color: #ffffff;
+    font-size: 17px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      font-size: 18px;
+    }
+  }
+
+  &--small {
+    font-size: 18px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      width: 175px;
+    }
+  }
+
+  &--big {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      width: 100%;
+    }
+  }
+
+  &--interier {
+    background-color: #63d1bb;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 -5px 0 0 #59d5bc;
+      cursor: pointer;
+      background-color: #59d5bc;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      fill: #29a592;
+    }
+
+    &:active::after,
+    &:active .info-navigation__item {
+      opacity: 0.3;
+    }
+  }
+
+  &--toy {
+    background-color: #56c3b2;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 -5px 0 0 #46c1ae;
+      cursor: pointer;
+      background-color: #46c1ae;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      fill: #239f8e;
+    }
+
+    &:active::after,
+    &:active .info-navigation__item {
+      opacity: 0.3;
+    }
   }
 }

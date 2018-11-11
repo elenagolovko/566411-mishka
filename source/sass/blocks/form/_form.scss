@@ -1,3 +1,75 @@
+// .form {
+//   margin-bottom: 55px;
+// }
+
+.form__section {
+  margin-bottom: 27px;
+  padding: 0 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 50px;
+    margin-bottom: 30px;
+
+    &--type {
+      padding-bottom: 7px;
+    }
+
+    &--color {
+      padding-bottom: 47px;
+    }
+
+    &--name {
+      padding-top: 17px;
+      padding-bottom: 20px;
+    }
+
+    &--contacts {
+      padding-top: 65px;
+      padding-bottom: 58px;
+    }
+
+    &:nth-child(2n) {
+      background-color: #f1f1f1;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 8px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding-bottom: 46px;
+      padding-top: 7px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      padding-top: 7px;
+      padding-bottom: 42px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 0;
+    padding-right: 0;
+
+    &--color {
+      padding-bottom: 21px;
+    }
+
+    &--name {
+      padding-bottom: 19px;
+    }
+
+    &--contacts {
+      padding-top: 66px;
+      padding-bottom: 48px;
+    }
+  }
+}
+
 .form__field {
   position: relative;
   margin: 0;
@@ -5,7 +77,33 @@
   display: flex;
   flex-direction: column;
   border: none;
-  margin-bottom: 25px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    max-width: 520px;
+    margin-left: auto;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    left: -12px;
+
+    @include wrapper(722px);
+  }
+
+  &--tel {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &--color {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      @include wrapper(810px);
+    }
+  }
 }
 
 .form__legend {
@@ -16,6 +114,32 @@
   color: #63d1bb;
   font-weight: 700;
 
+  @media (min-width: map-get($breakpoints, tablet)) {
+    position: absolute;
+    top: 18px;
+    left: -146px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    // DESKTOP
+    top: 0;
+    left: -95px;
+
+    &--color {
+      left: -50px;
+    }
+  }
+
+  &--email {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      margin-right: 106px;
+    }
+
+    // @media (min-width: map-get($breakpoints, desktop)) {
+    //   margin-right: 72px;
+    // }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -24,6 +148,10 @@
     width: 200px;
     height: 1px;
     background-color: #62d1ba;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      display: none;
+    }
   }
 }
 
@@ -32,9 +160,23 @@
   font-weight: 700;
   color: #000000;
 
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
   &--type,
   &--color {
-    padding: 10px 0 15px 57px;
+    padding: 10px 0 10px 65px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      // padding-bottom: 23px;
+      padding: 11px 0 23px 82px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      padding: 10px 0 23px 82px;
+    }
 
     &::before {
       content: "";
@@ -44,28 +186,140 @@
       width: 39px;
       height: 39px;
       box-sizing: border-box;
+
+      @media (min-width: map-get($breakpoints, tablet)) {
+        // width: 55px;
+        // height: 55px;
+      }
     }
   }
 
-  &--type::before {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 11px #ffffff;
-    border-radius: 50%;
-    border: 2px solid #444444;
+  &--type {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      // margin-bottom: 17px;
+    }
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      margin-bottom: 25px;
+      padding: 17px 0 10px 83px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-bottom: 25px;
+    }
+
+    &::before {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 9px #ffffff;
+      border-radius: 50%;
+      border: 2px solid #444444;
+      transition: border 0.25s ease-out;
+
+      @media (min-width: map-get($breakpoints, tablet)) {
+        top: 6px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    &:hover::before,
+    &:focus::before {
+      border-color: #62d1ba;
+      cursor: pointer;
+    }
+
+    &:active::before {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
   }
 
-  &--color::before {
-    border: 2px solid #444444;
-    background-repeat: no-repeat;
+  &--color {
+    margin-bottom: 18px;
+
+    @media (min-width: map-get($breakpoints, mobile)) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      min-width: 33%;
+      margin-bottom: 17px;
+
+      &:nth-of-type(5),
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      width: 215px;
+      min-width: unset;
+      margin-bottom: 28px;
+      box-sizing: border-box;
+
+      // &:nth-of-type(4) {
+      //   margin-bottom: 0;
+      // }
+
+      // &:not(:last-of-type) {
+      //   margin-bottom: 41px;
+      // }
+    }
+
+    &::before {
+      @media (min-width: map-get($breakpoints, mobile)) {
+        top: 50%;
+      }
+
+      @media (min-width: map-get($breakpoints, tablet)) {
+        top: 40%;
+        width: 55px;
+        height: 55px;
+      }
+
+      @media (min-width: map-get($breakpoints, desktop)) {
+        top: 35%;
+      }
+
+      border: 2px solid #444444;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition: border 0.25s ease-out;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      border-color: #62d1ba;
+      cursor: pointer;
+    }
+
+    &:active::before {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--name {
     padding-top: 25px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding-top: 10px;
+      margin-right: 20px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-right: 30px;
+      padding-top: 16px;
+    }
   }
 }
 
 .form__radio:checked + .form__label::before {
   background-color: #63d1ba;
+}
+
+.form__radio:focus + .form__label::before {
+  border-color: #62d1ba;
 }
 
 .form__checkbox:checked + .form__label::before {
@@ -74,40 +328,251 @@
   background-position: 50%;
 }
 
+.form__checkbox:focus + .form__label::before {
+  border-color: #62d1ba;
+}
+
 .form__icon {
   position: absolute;
-  top: 50%;
   right: 5px;
+  transition: fill 0.25s ease-in-out;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    top: 5px;
+    right: 25px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    right: 0;
+  }
 }
 
 .form__input {
   width: 100%;
   box-sizing: border-box;
+  transition: border 0.25s ease-out;
+  font-size: 19px;
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+    cursor: pointer;
+  }
+
+  &:active {
+    border-color: #62d1ba;
+  }
 
   &--name,
   &--tel,
   &--email {
-    padding: 15px 0;
+    @media (min-width: map-get($breakpoints, mobile)) {
+      padding-left: 0;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+
+    padding: 15px 0 15px 20px;
     border: none;
     border-bottom: 2px solid #000000;
   }
 
+  &--tel,
+  &--email {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      padding-top: 0;
+    }
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      background-color: #f1f1f1;
+    }
+
+    &:hover ~ .form__icon,
+    &:focus ~ .form__icon {
+      fill: #62d1ba;
+    }
+
+    &:active ~ .form__icon {
+      fill: #62d1ba;
+    }
+  }
+
   &--textarea {
     min-height: 142px;
-    margin-top: 15px;
     padding: 17px;
     border: 2px solid #000000;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      margin-top: 15px;
+    }
   }
 }
 
 .form__input::placeholder {
   font-size: 17px;
-  color: #d6d6d6;
+  color: rgba(68, 68, 68, 0.3);
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 19px;
+  }
 }
 
 .form__warning {
+  order: 1;
   display: inline-block;
   margin: 15px 0 30px 0;
   font-size: 14px;
+  line-height: 16px;
   color: #444444;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin: 0;
+    font-size: 17px;
+  }
+}
+
+.form__action {
+  order: 2;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    order: 1;
+  }
+}
+
+.form__field-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    flex-direction: row;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 22px;
+
+    &--color {
+      padding-left: 65px;
+    }
+  }
+}
+
+.form__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    // width: 50%;
+    padding-left: 20px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    // left: 0;
+  }
+
+  &--colors {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      width: 100%;
+      max-height: 200px;
+      justify-content: space-between;
+      padding-left: 67px;
+    }
+  }
+
+  &--tel,
+  &--email {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      width: 500px;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      width: 100%;
+    }
+  }
+
+  &--tel {
+    margin-bottom: 25px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      // padding-left: 12px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &--name,
+  &--additional {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      width: 100%;
+    }
+  }
+
+  &--colors,
+  &--name,
+  &--tel,
+  &--email,
+  &--additional {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      // @include wrapper(700px, 0);
+    }
+  }
+
+  &--type {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      // @include wrapper(350px);
+
+      // padding-left: 57px;
+    }
+  }
+}
+
+.form__input-wrapper {
+  margin-bottom: 16px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-of-type) {
+      margin-bottom: 22px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    &:not(:last-of-type) {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.form__action-wrapper {
+  margin-bottom: 55px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin-bottom: 0;
+    padding: 0 50px 50px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    @include wrapper(700px);
+  }
 }

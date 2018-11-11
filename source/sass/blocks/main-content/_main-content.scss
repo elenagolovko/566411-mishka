@@ -1,30 +1,117 @@
 .main-content__section {
-  padding: 35px;
+  padding: 51px 35px;
 
-  &--title {
-    background-color: #f1f1f1;
-    text-align: center;
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 88px;
+    background-image: url("../../../img/bg-zigzag-fill.svg");
+    background-repeat: no-repeat;
+    background-position: 0 216px;
+    background-size: contain;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 21px;
+    background-position: 0 220px;
   }
 }
 
 .main-content__video {
   padding: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding: 55px 50px  50px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding: 0;
+
+    @include wrapper(1050px);
+
+    margin: 0 auto 100px auto;
+  }
 }
 
 .main-content__title {
+  padding: 51px 35px;
+  background-color: #f1f1f1;
+  text-align: center;
   color: #000000;
   font-size: 27px;
   line-height: 30px;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin: 0;
+    font-size: 43px;
+    line-height: 50px;
+    padding: 88px;
+    background-image: url("../../../img/bg-zigzag-fill.svg");
+    background-repeat: no-repeat;
+    background-position: 0 216px;
+    background-size: contain;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 53px;
+    line-height: 57px;
+    background-position: 0 220px;
+  }
 }
 
 .main-content__form {
-  padding: 30px;
+  // padding: 30px;
+
+  // @media (min-width: map-get($breakpoints, desctop)) {
+  //   padding: 50px;
+  // }
 }
 
 .main-content__card,
 .main-content__reviews {
-  background-image: url("../../../img/bg-zigzag-line.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    background-image: url("../../../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      height: 3%;
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      height: 21px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include wrapper();
+  }
+}
+
+.main-content__about {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include wrapper(700px);
+  }
+}
+
+.main-content__reviews {
+  // @media (min-width: map-get($breakpoints, tablet)) {
+  //   background-image: url(../../../img/bg-zigzag-line.svg);
+  //   background-repeat: no-repeat, no-repeat;
+  //   background-position: 0, bottom;
+  //   background-size: 28%, 100%;
+  // }
 }

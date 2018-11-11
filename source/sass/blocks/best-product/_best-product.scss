@@ -1,10 +1,71 @@
+.best-product {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    width: 100%;
+  }
+}
+
+.best-product__text {
+  margin: 25px 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-bottom: 43px;
+  }
+}
+
+.best-product__body {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    max-width: 290px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    max-width: 350px;
+    margin-top: 165px;
+  }
+}
+
+.best-product__heading {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    position: relative;
+    align-items: center;
+    width: 673px;
+    margin-left: 38px;
+  }
+}
+
 .best-product__title {
-  position: relative;
-  top: -2rem;
   margin: 0;
   font-size: 25px;
   line-height: 30px;
   color: #000000;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    min-width: 540px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .best-product__chars {
@@ -15,15 +76,47 @@
 
 .best-product__char {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  // не соответствует макету пока
-  padding: 10px;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
+  font-size: 15px;
+  line-height: 20px;
+  color: #444444;
+
+  &--value {
+    width: 65%;
+  }
+}
+
+.best-product__image-wrapper {
+  max-width: 100%;
+}
+
+.best-product__section {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    max-width: 875px;
+    margin-left: auto;
+    margin-top: -155px;
+    align-items: flex-start;
+  }
 }
 
 .best-product__image {
   width: 100%;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    height: 370px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    width: 525px;
+    height: 637px;
+  }
 }
 
 .best-product__price {
@@ -31,4 +124,31 @@
   text-align: center;
   font-weight: 700;
   line-height: 24px;
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.best-product__action {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 290px;
+  }
+}
+
+.best-product__footer {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    position: absolute; ///!!!!!!!!!!!!!!!!
+    min-width: 290px;
+    bottom: 11%;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    max-width: 350px;
+    left: 20%;
+  }
 }

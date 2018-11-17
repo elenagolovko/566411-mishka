@@ -24,7 +24,7 @@
 }
 
 .product__content {
-  padding: 0 28px;
+  padding: 0 21px 0 28px;
   border: 1px solid #ececec;
   transition: box-shadow 0.25s ease-in-out;
 
@@ -42,7 +42,7 @@
 
 .product__info {
   @media (min-width: map-get($breakpoints, desktop)) {
-    height: 120px;
+    height: 118px;
   }
   // padding-bottom: 25px;
   // border-bottom: 1px solid #ececec;
@@ -66,12 +66,12 @@
   height: 100%;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    width: 334px;// временно скорее всего
+    width: 315px;
   }
 }
 
 .product__title {
-  margin: 28px 0 6px 0;
+  margin: 26px 0 6px 0;
   color: #000000;
   font-size: 17px;
   line-height: 24px;
@@ -86,18 +86,22 @@
   }
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin: 25px 0 15px 0;
+    margin: 25px 0 5px 0;
     font-size: 20px;
     line-height: 24px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    margin-bottom: 7px;
+    margin: 22px 0 5px -3px;
+
+    &--long {
+      padding-right: 35px;
+    }
   }
 }
 
 .product__desc {
-  margin-bottom: 23px;
+  margin-bottom: 19px;
   font-size: 13px;
   line-height: 30px;
   color: #444444;
@@ -106,11 +110,27 @@
     font-size: 15px;
     line-height: 30px;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-left: -3px;
+  }
 }
 
 .product__price {
+  font-size: 15px;
+  line-height: 24px;
   font-weight: 700;
   color: #000000;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-left: -6px;
+    margin-top: -1px;
+  }
 }
 
 .product__footer {
@@ -118,6 +138,16 @@
   justify-content: space-between;
   padding: 20px 0 27px 0;
   border-top: 1px solid #ececec;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    padding-right: 4px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    padding-top: 22px;
+    padding-bottom: 26px;
+  }
 }
 
 .product__icon {

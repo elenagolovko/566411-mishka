@@ -6,7 +6,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding: 135px 0 0 0;
+    padding: 127px 0 0 0;
 
     @include wrapper(1050px);
   }
@@ -30,7 +30,7 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     &:not(:last-of-type) {
-      margin-bottom: 57px;
+      margin-bottom: 55px;
     }
   }
   // box-shadow: 0 0 1px 0 #b9b9b9;
@@ -40,7 +40,7 @@
     margin-bottom: 53px;
 
     &:not(:last-of-type) {
-      margin-right: 55px;
+      margin-right: 52px;
     }
   }
 }

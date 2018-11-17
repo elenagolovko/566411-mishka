@@ -1,13 +1,13 @@
 .header {
   position: relative;
-  padding-top: 20px;
+  padding-top: 22px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 0;
-    border-bottom: 1px solid #dfdfdf;
+    // border-bottom: 1px solid #dfdfdf;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
@@ -17,7 +17,7 @@
 
 .header__logo {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   text-align: center;
   transition: opacity 0.25s ease-in-out;
 

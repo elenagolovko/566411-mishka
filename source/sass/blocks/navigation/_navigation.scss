@@ -15,12 +15,12 @@
 
 .navigation__toggle {
   position: absolute;
-  top: -60px;
+  top: -54px;
   transform: translateY(50%);
   right: 30px;
   border: none;
   background-color: #ffffff;
-  background-image: url("../../../img/icon-menu-open.svg");
+  background-image: url("../img/icon-menu-open.svg");
   background-repeat: repeat-y;
   height: 14px;
   width: 20px;
@@ -30,7 +30,7 @@
   }
 
   &--closed {
-    background-image: url("../../../img/icon-menu-close.svg");
+    background-image: url("../img/icon-menu-close.svg");
     background-repeat: no-repeat;
     width: 22px;
     height: 22px;
@@ -43,6 +43,7 @@
 }
 
 .navigation__list {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -73,7 +74,7 @@
       padding: 0;
       position: absolute;
       z-index: 10;
-      bottom: -40px;
+      bottom: -38px;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
@@ -114,12 +115,13 @@
 
     @media (min-width: map-get($breakpoints, tablet)) {
       order: 2;
-      padding: 33px 0 33px 50px;
+      padding: 31px 0 34px 58px;
       width: 80%;
       box-sizing: border-box;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
+      padding-left: 60px;
       width: auto;
       order: 4;
     }
@@ -134,7 +136,7 @@
 
     @media (min-width: map-get($breakpoints, desktop)) {
       order: 1;
-      padding: 30px 30px 30px 0;
+      padding: 28px 35px 30px 0;
       border-right: 1px solid #ececec;
     }
   }
@@ -143,20 +145,21 @@
     @media (min-width: map-get($breakpoints, tablet)) {
       order: 4;
       font-size: 15px;
-      left: 220px;
+      left: 217px;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
       margin-right: auto;
       order: 2;
-      padding-left: 30px;
+      padding-left: 35px;
     }
   }
 
   &--search {
     @media (min-width: map-get($breakpoints, tablet)) {
       order: 1;
-      width: 82px;
+      width: 70px;
+      text-align: center;
       padding: 0;
       border-left: 1px solid #ececec;
       border-right: 1px solid #ececec;
@@ -195,14 +198,13 @@
 
     @media (min-width: map-get($breakpoints, desktop)) {
       display: block;
-      left: 245px;
+      left: 270px;
     }
   }
 }
 
 .navigation__icon {
   position: absolute;
-  left: 30px;
   transition: fill 0.25s ease-in-out;
 
   @media (min-width: map-get($breakpoints, tablet)) {
@@ -222,26 +224,28 @@
 
     @media (min-width: map-get($breakpoints, tablet)) {
       top: 50%;
+      right: 7px;
       transform: translateY(-50%);
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
       position: static;
-      transform: translateX(0%);
+      transform: translateX(-20%);
     }
   }
 
   &--cart {
     top: 50%;
+    left: 30px;
     transform: translateY(-50%);
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      left: -22px;
+      left: -27px;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
       top: 0;
-      transform: translateY(0);
+      transform: translateY(20%);
     }
   }
 }
@@ -264,6 +268,15 @@
   &--search {
     @media (min-width: map-get($breakpoints, tablet)) {
       display: none;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    font-size: 17px;
+    line-height: 24px;
+
+    &--dropped {
+      font-size: 15px;
     }
   }
 }

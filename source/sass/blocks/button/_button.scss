@@ -1,5 +1,5 @@
 .button {
-  padding: 15px;
+  padding: 14px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -53,8 +53,10 @@
   }
 
   &--big {
-    @media (min-width: map-get($breakpoints, mobile)) {
-      width: 100%;
+    width: 100%;
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      width: 230px;
     }
   }
 

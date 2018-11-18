@@ -1,10 +1,10 @@
 .card {
   &--best-product {
-    padding: 30px;
+    padding: 28px 30px;
     padding-bottom: 14px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      padding: 50px;
+      padding: 50px 50px 36px;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
@@ -16,23 +16,23 @@
 
 .card__title {
   font-weight: 700;
-  margin: 6px 0 0 0;
+  margin: 5px 0 0 0;
   font-size: 17px;
   line-height: 20px;
   color: #63d1bb;
   text-transform: uppercase;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin-top: 11px;
-    margin-bottom: 54px;
-    max-width: 80px;
+    margin-top: 1px;
+    margin-bottom: 60px;
+    max-width: 130px;
     text-align: center;
     font-size: 17px;
     line-height: 17px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    margin-top: 70px;
+    margin-top: 64px;
     margin-left: 0;
   }
 }

@@ -3,7 +3,7 @@
   color: #000000;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    padding: 50px;
+    padding: 50px 50px 18px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
@@ -12,20 +12,23 @@
 }
 
 .about__title {
-  margin: 30px 0 20px 0;
+  margin: 27px 0 25px 0;
   line-height: 30px;
   font-size: 25px;
 
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin: 27px 0 43px 0;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+
   @media (min-width: map-get($breakpoints, desktop)) {
-    margin-top: 45px;
+    margin-top: 26px;
+    margin-left: -7px;
     margin-bottom: 40px;
     font-size: 53px;
     line-height: 57px;
-  }
-
-  @media (min-width: map-get($breakpoints, tablet)) {
-    font-size: 43px;
-    line-height: 50px;
   }
 }
 
@@ -38,7 +41,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 445px;
+    max-height: 500px;
+    height: 500px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
@@ -47,22 +51,24 @@
 }
 
 .about__item {
-  // position: relative;
-  // padding-top: 60px;
   font-weight: 700;
 
   &:not(:last-of-type) {
-    padding-bottom: 20px;
+    padding-bottom: 21px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      padding-bottom: 46px;
+    }
 
     @media (min-width: map-get($breakpoints, desktop)) {
-      padding-bottom: 55px;
+      padding-bottom: 49px;
     }
   }
 
   &::before {
     content: "";
     display: block;
-    // position: absolute;
+    margin-bottom: 12px;
     top: 0;
     width: 50px;
     height: 50px;
@@ -77,44 +83,90 @@
 
   &--flower {
     &::before {
-      background-image: url("../../../img/icon-feature-flower.svg");
+      background-image: url("../img/icon-feature-flower.svg");
+      width: 50px;
+      height: 50px;
     }
   }
 
   &--money {
     &::before {
-      background-image: url("../../../img/icon-feature-money.svg");
+      background-image: url("../img/icon-feature-money.svg");
+      width: 48px;
+      height: 43px;
+      margin-bottom: 19px;
     }
   }
 
   &--heart {
     &::before {
-      background-image: url("../../../img/icon-feature-heart.svg");
+      background-image: url("../img/icon-feature-heart.svg");
     }
   }
 
   &--clew {
     &::before {
-      background-image: url("../../../img/icon-feature-ball.svg");
+      background-image: url("../img/icon-feature-ball.svg");
+      width: 40px;
+      height: 51px;
+      margin-bottom: 10px;
     }
   }
 
   &--rocket {
     &::before {
-      background-image: url("../../../img/icon-feature-rocket.svg");
+      background-image: url("../img/icon-feature-rocket.svg");
+      width: 47px;
+      height: 51px;
     }
   }
 
   &--present {
     &::before {
-      background-image: url("../../../img/icon-feature-gift.svg");
+      background-image: url("../img/icon-feature-gift.svg");
+      width: 40px;
     }
   }
 }
 
 .about__text {
+  font-size: 17px;
+  line-height: 20px;
   margin: 0;
   text-align: left;
+  max-width: 200px;
+
+  &--flower {
+    max-width: 185px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      max-width: 215px;
+    }
+  }
+
+  &--money {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      max-width: 235px;
+    }
+  }
+
+  &--heart {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      max-width: 235px;
+    }
+  }
+
+  &--clew,
+  &--present,
+  &--rocket {
+    max-width: 250px;
+  }
+
+  &--rocket {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      max-width: 300px;
+    }
+  }
 
   @media (min-width: map-get($breakpoints, tablet)) {
     font-size: 20px;

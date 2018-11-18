@@ -6,11 +6,9 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding: 95px 0;
+    padding: 95px 0 98px;
     position: relative;
-    // display: flex;
     justify-content: flex-end;
-    // padding-left: 175px;
 
     @include wrapper(1050px);
   }
@@ -44,7 +42,7 @@
 }
 
 .contacts__item {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   display: flex;
   flex-direction: row;
   font-size: 15px;
@@ -52,24 +50,43 @@
   color: #444444;
 
   @media (min-width: map-get($breakpoints, tablet)) {
+    margin-bottom: 27px;
     font-size: 17px;
     width: 100%;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    justify-content: flex-end;
+    padding-left: 50px;
+    margin-top: -2px;
+    margin-bottom: 36px;
   }
 }
 
 .contacts__category {
   margin-right: 11%;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    margin-right: 7%;
+  }
 }
 
 .contacts__value {
+  font-size: 15px;
   line-height: 30px;
 
   &--address {
-    width: 204px;
+    width: 141px;
+    margin-top: -5px;
+    margin-left: 3px;
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    font-size: 17px;
+    line-height: 30px;
+
+    &--address {
+      width: 170px;
+    }
   }
 }
 
@@ -80,6 +97,7 @@
   transition: color 0.25s ease-in-out, border 0.25s ease-in-out;
   border-bottom: 1px solid #62d1ba;
   line-height: 30px;
+  margin-top: -6px;
 
   &:hover,
   &:focus {
@@ -87,11 +105,15 @@
     border-bottom-color: #46c1ae;
     cursor: pointer;
   }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    margin-top: -4px;
+  }
 }
 
 .contacts__title {
-  margin: 35px 0;
-  padding: 0 30px;
+  margin: 34px 0 30px;
+  padding: 0 28px;
   color: #000000;
   font-size: 18px;
   line-height: 30px;
@@ -102,7 +124,7 @@
     align-items: center;
     font-size: 43px;
     line-height: 50px;
-    margin: 50px 0 50px 0;
+    margin: 29px 21px 37px -3px;
     padding-left: 50px;
 
     &::after {
@@ -110,7 +132,7 @@
       display: block;
       width: 55px;
       height: 85px;
-      background-image: url("../../../img/icon-flag.svg");
+      background-image: url("../img/icon-flag.svg");
       background-repeat: no-repeat;
       background-position: 50%;
 
@@ -121,13 +143,12 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    // position: absolute;
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding: 0;
     font-size: 53px;
     line-height: 57px;
-    margin: 60px 0 0 0;
+    margin: 54px 0 0 -15px;
   }
 }
 
@@ -135,7 +156,8 @@
   margin: 40px 0 10px 0;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin-top: 50px;
+    margin-top: 56px;
+    margin-bottom: 6px;
     width: 230px;
     text-align: center;
   }
@@ -147,7 +169,7 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     position: absolute;
-    bottom: 86px;
-    left: 155px;
+    bottom: 100px;
+    left: 146px;
   }
 }

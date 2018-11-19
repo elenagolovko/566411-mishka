@@ -47,6 +47,10 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {

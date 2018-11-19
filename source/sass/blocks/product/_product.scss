@@ -29,7 +29,7 @@
   transition: box-shadow 0.25s ease-in-out;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    width: 50%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,7 +42,7 @@
 
 .product__info {
   @media (min-width: map-get($breakpoints, desktop)) {
-    height: 118px;
+    height: 125px;
   }
   // padding-bottom: 25px;
   // border-bottom: 1px solid #ececec;
@@ -54,21 +54,103 @@
 }
 
 .product__image-container {
+  width: 100%;
+  height: 195px;
   display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--hare {
+    background-image: url("../img/photo-hare-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/photo-hare-mobile@2x.jpg");
+    }
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      background-image: url("../img/photo-hare-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/photo-hare-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      background-image: url("../img/photo-hare-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/photo-hare-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--bowl {
+    background-image: url("../img/photo-bowl-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/photo-bowl-mobile@2x.jpg");
+    }
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      background-image: url("../img/photo-bowl-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/photo-bowl-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      background-image: url("../img/photo-bowl-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/photo-bowl-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--toys {
+    background-image: url("../img/photo-toys-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/photo-toys-mobile@2x.jpg");
+    }
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+      background-image: url("../img/photo-toys-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/photo-toys-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: map-get($breakpoints, desktop)) {
+      background-image: url("../img/photo-toys-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/photo-toys-desktop@2x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+  }
 
   @media (min-width: map-get($breakpoints, desktop)) {
     height: 465px;
   }
 }
 
-.product__image {
-  width: 100%;
-  height: 100%;
+// .product__image {
+//   width: 100%;
+//   height: 100%;
 
-  @media (min-width: map-get($breakpoints, tablet)) {
-    width: 315px;
-  }
-}
+//   @media (min-width: map-get($breakpoints, tablet)) {
+//     width: 315px;
+//   }
+// }
 
 .product__title {
   margin: 26px 0 6px 0;
@@ -92,7 +174,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    margin: 22px 0 5px -3px;
+    margin: 25px 0 5px -3px;
 
     &--long {
       padding-right: 35px;

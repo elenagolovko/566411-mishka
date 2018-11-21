@@ -61,22 +61,25 @@
 }
 
 .info__title {
+  max-width: 1150px;
+  margin: 0 auto;
   padding: 0 30px;
   margin: 0 0 121px 0;
   font-size: 27px;
   color: #000000;
   line-height: 30px;
   text-align: center;
+  box-sizing: border-box;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin: 0 0 415px 0;
-    padding: 1% 15%;
+    margin: 0 0 357px 0;
+    padding: 10px 70px;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding: 10px 19% 0 19%;
+    padding: 10px 200px 0 200px;;
     font-size: 53px;
     line-height: 57px;
   }

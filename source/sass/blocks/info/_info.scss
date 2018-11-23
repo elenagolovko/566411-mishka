@@ -62,9 +62,8 @@
 
 .info__title {
   max-width: 1150px;
-  margin: 0 auto;
+  margin: 0 auto 121px auto;
   padding: 0 30px;
-  margin: 0 0 121px 0;
   font-size: 27px;
   color: #000000;
   line-height: 30px;
@@ -79,7 +78,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding: 10px 200px 0 200px;;
+    padding: 10px 200px 0 200px;
     font-size: 53px;
     line-height: 57px;
   }

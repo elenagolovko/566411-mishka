@@ -53,6 +53,16 @@
 .product__cart {
   background-color: #ffffff;
   border: none;
+
+  &:hover .product__icon,
+  &:focus .product__icon {
+    fill: #63d1bb;
+    cursor: pointer;
+  }
+
+  &:active .product__icon {
+    fill: rgba(99, 209, 187, 0.3);
+  }
 }
 
 .product__image-container {
@@ -155,13 +165,13 @@
 .product__icon {
   transition: fill 0.25s ease-in-out;
 
-  &:hover,
-  &:focus {
-    fill: #63d1bb;
-    cursor: pointer;
-  }
+  // &:hover,
+  // &:focus {
+  //   fill: #63d1bb;
+  //   cursor: pointer;
+  // }
 
-  &:active {
-    fill: rgba(99, 209, 187, 0.3);
-  }
+  // &:active {
+  //   fill: rgba(99, 209, 187, 0.3);
+  // }
 }

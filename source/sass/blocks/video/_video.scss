@@ -2,6 +2,22 @@
   background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, desktop)) {
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
 }
 
 .video__block {

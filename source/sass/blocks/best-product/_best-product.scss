@@ -84,14 +84,19 @@
   font-size: 15px;
   line-height: 20px;
   color: #444444;
+}
 
-  &--value {
-    width: 63%;
+.best-product__char-value {
+  display: block;
+  width: 63%;
 
-    @media (min-width: map-get($breakpoints, tablet)) {
-      width: 67%;
-    }
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 67%;
   }
+}
+
+.best-product__char-category {
+  display: block;
 }
 
 .best-product__image-wrapper {
@@ -117,16 +122,18 @@
 }
 
 .best-product__image {
-  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  vertical-align: bottom;
+  display: block;
+  margin: 0 auto;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    height: 405px;
-    width: 335px;
+    min-width: 335px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    width: 525px;
-    height: 637px;
+    min-width: 525px;
   }
 }
 

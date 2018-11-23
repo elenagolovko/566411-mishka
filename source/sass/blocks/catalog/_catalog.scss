@@ -36,7 +36,8 @@
   // box-shadow: 0 0 1px 0 #b9b9b9;
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    max-width: 315px;
+    max-width: 317px;
+    width: 100%;
     margin-bottom: 53px;
 
     &:not(:last-of-type) {

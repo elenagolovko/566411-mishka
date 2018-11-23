@@ -32,8 +32,9 @@
   }
 }
 
-.footer__logo-icon {
-  transition: fill 0.25s ease-in-out;
+.footer__logo-link {
+  display: block;
+  width: fit-content;
 
   &:hover,
   &:focus {
@@ -44,4 +45,8 @@
   &:active {
     fill: #bde3dd;
   }
+}
+
+.footer__logo-icon {
+  transition: fill 0.25s ease-in-out;
 }

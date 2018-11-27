@@ -1,5 +1,11 @@
 .best-product {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    max-width: 668px;
+    margin: 0 auto;
+  }
+
   @media (min-width: map-get($breakpoints, desktop)) {
+    max-width: 100%;
     width: 100%;
   }
 }

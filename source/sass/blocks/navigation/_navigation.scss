@@ -50,6 +50,7 @@
 
   @media (min-width: map-get($breakpoints, tablet)) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
@@ -67,6 +68,13 @@
     padding: 10px;
     border-top: none;
     border-bottom: none;
+
+    &--dropped {
+      position: absolute;
+      display: flex;
+      bottom: -70px;
+      z-index: 10;
+    }
   }
 
   &--tablet-dropped {

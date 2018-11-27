@@ -68,10 +68,6 @@
   padding: 31px 20%;
   border-top: 1px solid #ececec;
 
-  &--dropped {
-    display: none;
-  }
-
   @media (min-width: map-get($breakpoints, tablet)) {
     padding: 10px;
     border-top: none;
@@ -79,15 +75,16 @@
   }
 
   &--dropped {
+    display: none;
     justify-content: space-between;
     padding: 5px 0;
     position: absolute;
     right: 47px;
-    display: flex;
     bottom: -46px;
     z-index: 10;
+
     @media (min-width: map-get($breakpoints, desktop)) {
-      right: 0;
+      display: flex;
       width: 100%;
       max-width: 1050px;
     }
@@ -174,7 +171,7 @@
       display: flex;
       justify-content: flex-end;
       order: 3;
-      padding: 30px 30px 30px 53px;;
+      padding: 30px 30px 30px 53px;
       // border-left: none;
     }
   }
@@ -194,7 +191,6 @@
     @media (min-width: map-get($breakpoints, desktop)) {
       display: block;
       border-right: none;
-      margin-right: 62px;
     }
   }
 
@@ -258,6 +254,12 @@
   &--new,
   &--sale {
     display: none;
+  }
+
+  &--new {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      margin-right: 62px;
+    }
   }
 
   &:hover,

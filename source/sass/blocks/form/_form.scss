@@ -107,7 +107,6 @@
 }
 
 .form__legend {
-  // position: relative;
   margin-bottom: 25px;
   line-height: 16px;
   text-transform: uppercase;
@@ -121,7 +120,6 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    // DESKTOP
     top: 0;
     left: -95px;
 
@@ -134,10 +132,6 @@
     @media (min-width: map-get($breakpoints, tablet)) {
       margin-right: 106px;
     }
-
-    // @media (min-width: map-get($breakpoints, desktop)) {
-    //   margin-right: 72px;
-    // }
   }
 
   &::before {
@@ -170,7 +164,6 @@
     padding: 10px 0 10px 65px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-      // padding-bottom: 23px;
       padding: 11px 0 23px 82px;
     }
 
@@ -186,19 +179,10 @@
       width: 39px;
       height: 39px;
       box-sizing: border-box;
-
-      @media (min-width: map-get($breakpoints, tablet)) {
-        // width: 55px;
-        // height: 55px;
-      }
     }
   }
 
   &--type {
-    @media (min-width: map-get($breakpoints, mobile)) {
-      // margin-bottom: 17px;
-    }
-
     @media (min-width: map-get($breakpoints, tablet)) {
       margin-bottom: 25px;
       padding: 17px 0 10px 83px;
@@ -257,14 +241,6 @@
       min-width: unset;
       margin-bottom: 28px;
       box-sizing: border-box;
-
-      // &:nth-of-type(4) {
-      //   margin-bottom: 0;
-      // }
-
-      // &:not(:last-of-type) {
-      //   margin-bottom: 41px;
-      // }
     }
 
     &::before {
@@ -357,6 +333,10 @@
   &:focus {
     border-color: #62d1ba;
     cursor: pointer;
+
+    & + .form__label > .form__icon {
+      fill: #62d1ba;
+    }
   }
 
   &:active {
@@ -389,14 +369,6 @@
       background-color: #f1f1f1;
     }
 
-    &:hover ~ .form__icon,
-    &:focus ~ .form__icon {
-      fill: #62d1ba;
-    }
-
-    &:active ~ .form__icon {
-      fill: #62d1ba;
-    }
   }
 
   &--textarea {

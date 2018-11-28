@@ -1,7 +1,7 @@
 @import "_variables.scss";
+@import "_base.scss";
 @import "_mixins.scss";
 @import "blocks/visually-hidden/_visually-hidden.scss";
-@import "blocks/info-navigation/_info-navigation.scss";
 @import "blocks/best-product/_best-product.scss";
 @import "blocks/navigation/_navigation.scss";
 @import "blocks/contacts/_contacts.scss";
@@ -13,7 +13,6 @@
 @import "blocks/video/_video.scss";
 @import "blocks/form/_form.scss";
 @import "blocks/copyright/_copyright.scss";
-@import "blocks/video-section/_video-section.scss";
 @import "blocks/product/_product.scss";
 @import "blocks/main-content/_main-content.scss";
 @import "blocks/about/_about.scss";
@@ -24,3 +23,5 @@
 @import "blocks/info/_info.scss";
 @import "blocks/form-section/_form-section.scss";
 @import "blocks/button/_button.scss";
+@import "blocks/info-navigation/_info-navigation.scss";
+@import "blocks/video-section/_video-section.scss";

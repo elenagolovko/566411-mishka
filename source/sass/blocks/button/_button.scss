@@ -55,9 +55,9 @@
   &--big {
     width: 100%;
 
-    @media (min-width: map-get($breakpoints, desktop)) {
-      width: 230px;
-    }
+    // @media (min-width: map-get($breakpoints, desktop)) {
+    //   width: 230px;
+    // }
   }
 
   &--interier {

@@ -1,10 +1,4 @@
 .copyright {
-  // display: flex;
-  // flex-direction: row;
-  // padding: 23px 38px 0 38px;
-  // justify-content: space-between;
-  // align-items: center;
-
   @media (min-width: map-get($breakpoints, tablet)) {
     display: flex;
     width: 33.33%;
@@ -24,10 +18,10 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    max-width: 175px;
+    max-width: 186px;
     margin-left: auto;
     padding-top: 0;
-    padding-right: 9px;
+    padding-right: 0;
   }
 
   &:hover,

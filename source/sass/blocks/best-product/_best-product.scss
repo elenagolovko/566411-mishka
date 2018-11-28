@@ -144,13 +144,13 @@
 }
 
 .best-product__price {
-  padding: 19px 0 28px;
+  padding: 25px 0 28px;
   text-align: center;
   font-weight: 700;
   line-height: 24px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    padding: 19px 0 40px;
+    padding: 19px 0 35px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -177,7 +177,7 @@
 
 .best-product__footer {
   @media (min-width: map-get($breakpoints, tablet)) {
-    position: absolute; ///!!!!!!!!!!!!!!!!
+    position: absolute;
     min-width: 290px;
     bottom: 7%;
   }
@@ -185,6 +185,6 @@
   @media (min-width: map-get($breakpoints, desktop)) {
     max-width: 350px;
     left: 226px;
-    bottom: 10%;
+    bottom: 74px;
   }
 }

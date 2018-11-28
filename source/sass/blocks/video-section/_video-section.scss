@@ -14,7 +14,7 @@
 }
 
 .video-section__wrapper {
-  padding: 25px 34px 35px;
+  padding: 21px 34px 35px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
     padding: 0 45px 45px 45px;
@@ -107,8 +107,12 @@
 }
 
 .video-section__action {
-  width: auto;
+  // width: auto;
   display: block;
+
+  @media (min-width: map-get($breakpoints, tablet)) {
+    width: 100%;
+  }
 }
 
 .video-section__play {

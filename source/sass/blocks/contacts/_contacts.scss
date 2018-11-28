@@ -153,11 +153,11 @@
 }
 
 .contacts__action {
+  display: block;
   margin: 40px 0 10px 0;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin-top: 56px;
-    margin-bottom: 6px;
+    margin: 56px auto 6px auto;
     width: 230px;
     text-align: center;
   }

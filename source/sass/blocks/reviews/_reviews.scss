@@ -2,13 +2,11 @@
   position: relative;
 
   @media (min-width: map-get($breakpoints, tablet)) {
-    margin-top: 25px;
     padding-bottom: 50px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
     padding-bottom: 70px;
-    // padding-top: 40px;
   }
 }
 
@@ -61,7 +59,7 @@
 .reviews__actions {
   display: flex;
   flex-direction: row;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
   margin-top: -4px;
 
   @media (min-width: map-get($breakpoints, tablet)) {
@@ -72,7 +70,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    bottom: 21%;
+    bottom: 24%;
     right: 5px;
   }
 }
@@ -80,9 +78,10 @@
 .reviews__action {
   height: 50px;
   width: 50%;
-  border: none;
+  display: block;
   background-color: #ffffff;
-  box-shadow: 0 0 1px 0 #b9b9b9;
+  border: 1px solid #b9b9b9;
+  // box-shadow: 0 0 1px 0 #b9b9b9;
   background-repeat: no-repeat;
   background-position: 50%;
   transition: opacity 0.25s ease-out;
@@ -104,13 +103,14 @@
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
-      top: 122px;
+      top: 82px;
       right: 0;
     }
   }
 
   @media (min-width: map-get($breakpoints, tablet)) {
     box-shadow: none;
+    border: none;
   }
 
   &:hover,

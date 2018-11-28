@@ -83,6 +83,10 @@
     bottom: -46px;
     z-index: 10;
 
+    @media (min-width: map-get($breakpoints, tablet)) {
+      display: block;
+    }
+
     @media (min-width: map-get($breakpoints, desktop)) {
       display: flex;
       width: 100%;

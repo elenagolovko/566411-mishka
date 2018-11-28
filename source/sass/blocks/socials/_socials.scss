@@ -44,7 +44,7 @@
   flex-direction: row;
   align-items: center;
   margin: -3px 0 0 0;
-  padding: 0 34px 23px 57px;
+  padding: 0 64px 23px 57px;
   list-style: none;
   justify-content: center;
 
@@ -52,7 +52,6 @@
     width: 100%;
     padding: 13px 38px;
     align-items: center;
-    // padding-bottom: 3px;
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {

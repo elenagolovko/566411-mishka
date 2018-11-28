@@ -12,7 +12,7 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    padding: 137px 0 0 0;
+    padding: 120px 0 0 0;
 
     @include wrapper(700px);
   }

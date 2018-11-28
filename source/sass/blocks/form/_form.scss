@@ -55,6 +55,10 @@
     padding-left: 0;
     padding-right: 0;
 
+    &--type {
+      padding-bottom: 0;
+    }
+
     &--color {
       padding-bottom: 21px;
     }
@@ -107,6 +111,9 @@
 }
 
 .form__legend {
+  display: block;
+  width: 100%;
+  position: relative;
   margin-bottom: 25px;
   line-height: 16px;
   text-transform: uppercase;
@@ -120,8 +127,8 @@
   }
 
   @media (min-width: map-get($breakpoints, desktop)) {
-    top: 0;
-    left: -95px;
+    top: 26px;
+    left: -90px;
 
     &--color {
       left: -50px;
@@ -183,13 +190,15 @@
   }
 
   &--type {
+    margin-bottom: 5px;
+
     @media (min-width: map-get($breakpoints, tablet)) {
       margin-bottom: 25px;
       padding: 17px 0 10px 83px;
     }
 
     @media (min-width: map-get($breakpoints, desktop)) {
-      margin-bottom: 25px;
+      margin-bottom: 32px;
     }
 
     &::before {
@@ -310,6 +319,7 @@
 
 .form__icon {
   position: absolute;
+  top: -42px;
   right: 5px;
   transition: fill 0.25s ease-in-out;
 
@@ -320,6 +330,7 @@
 
   @media (min-width: map-get($breakpoints, desktop)) {
     right: 0;
+    top: -37px;
   }
 }
 
@@ -374,6 +385,7 @@
     min-height: 142px;
     padding: 17px;
     border: 2px solid #000000;
+    overflow: auto;
 
     @media (min-width: map-get($breakpoints, tablet)) {
       margin-top: 15px;
